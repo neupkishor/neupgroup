@@ -27,6 +27,12 @@ export function Header() {
               Vision
             </Link>
             <Link
+              href="/manage"
+              className="transition-colors hover:text-foreground/80 text-foreground/60"
+            >
+              Manage
+            </Link>
+            <Link
               href="#contact"
               className="transition-colors hover:text-foreground/80 text-foreground/60"
             >
