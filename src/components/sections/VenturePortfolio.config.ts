@@ -117,6 +117,13 @@ export const ventures: Venture[] = [
     link: "/legis",
   },
   {
+    logo: Gavel,
+    name: "Neup.Legal",
+    description: "Terms of Service and Privacy Policy for Neup Group.",
+    status: "Live",
+    link: "/legal",
+  },
+  {
     logo: BookOpen,
     name: "Neup.Ledger",
     description: "Smart, secure, and transparent accounting for your business.",
