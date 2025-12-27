@@ -7,6 +7,7 @@ import { Vision } from '@/components/sections/Vision';
 import { Differentiation } from '@/components/sections/Differentiation';
 import { Partnerships } from '@/components/sections/Partnerships';
 import type { Metadata } from 'next';
+import { OurClients } from '@/components/sections/OurClients';
 
 export const metadata: Metadata = {
   title: 'Home',
@@ -22,6 +23,7 @@ export default function Home() {
       <Capabilities />
       <Vision />
       <Differentiation />
+      <OurClients />
       <Partnerships />
     </>
   );
