@@ -13,24 +13,27 @@ import { useEffect, useState } from 'react';
 export function Header() {
   const pathname = usePathname();
   const [targetTitle, setTargetTitle] = useState('Neup.Group');
+  const [headerLink, setHeaderLink] = useState('/');
 
   useEffect(() => {
-    const getHeaderTitle = () => {
+    const getHeaderInfo = () => {
       if (pathname === '/neupid') {
-        return 'NeupID';
+        return { title: 'NeupID', link: '/neupid' };
       }
       if (pathname === '/foundation') {
-        return 'Neup.Foundation';
+        return { title: 'Neup.Foundation', link: '/foundation' };
       }
 
       const currentVenture = ventures.find(v => v.link === pathname);
       if (currentVenture) {
-        return currentVenture.name;
+        return { title: currentVenture.name, link: currentVenture.link };
       }
 
-      return 'Neup.Group';
+      return { title: 'Neup.Group', link: '/' };
     };
-    setTargetTitle(getHeaderTitle());
+    const { title, link } = getHeaderInfo();
+    setTargetTitle(title);
+    setHeaderLink(link);
   }, [pathname]);
   
   const animatedTitle = useTypewriter(targetTitle);
@@ -40,7 +43,7 @@ export function Header() {
       <div className="container flex h-14 max-w-screen-2xl items-center justify-between">
         {/* Left Section: Logo */}
         <div className="flex items-center">
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href={headerLink} className="flex items-center space-x-2">
             <NeupLogo className="h-6 w-6 text-primary" />
             <span className="font-bold sm:inline-block font-headline min-w-[150px]">
               {animatedTitle}
