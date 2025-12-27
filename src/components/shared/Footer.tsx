@@ -33,8 +33,15 @@ export function Footer() {
             <p className="text-muted-foreground">
               Building the next generation of digital ventures from Nepal, for the world.
             </p>
+            <div className="flex space-x-4 mt-4">
+                <Link href="https://facebook.com/neupgroup" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-muted-foreground hover:text-primary"><Facebook /></Link>
+                <Link href="https://instagram.com/neupgroup" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-primary"><Instagram /></Link>
+                <Link href="https://linkedin.com/company/neupgroup" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary"><Linkedin /></Link>
+                <Link href="https://twitter.com/neupgroup" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-muted-foreground hover:text-primary"><Twitter /></Link>
+                <Link href="https://youtube.com/@neupgroup" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-muted-foreground hover:text-primary"><Youtube /></Link>
+            </div>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 gap-8">
             <div>
               <h4 className="font-semibold mb-3">Ventures</h4>
               <ul className="space-y-2">
@@ -54,16 +61,6 @@ export function Footer() {
                 <li><Link href="/legal" className="text-muted-foreground hover:text-primary">Legal</Link></li>
                 <li><Link href="#contact" className="text-muted-foreground hover:text-primary">Partnerships</Link></li>
               </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-3">Connect</h4>
-              <div className="flex space-x-4">
-                <Link href="https://facebook.com/neupgroup" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-muted-foreground hover:text-primary"><Facebook /></Link>
-                <Link href="https://instagram.com/neupgroup" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-primary"><Instagram /></Link>
-                <Link href="https://linkedin.com/company/neupgroup" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary"><Linkedin /></Link>
-                <Link href="https://twitter.com/neupgroup" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-muted-foreground hover:text-primary"><Twitter /></Link>
-                <Link href="https://youtube.com/@neupgroup" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-muted-foreground hover:text-primary"><Youtube /></Link>
-              </div>
             </div>
           </div>
         </div>
