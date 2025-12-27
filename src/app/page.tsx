@@ -1,3 +1,21 @@
+import { Hero } from '@/components/sections/Hero';
+import { CompanyOverview } from '@/components/sections/CompanyOverview';
+import { VenturePortfolio } from '@/components/sections/VenturePortfolio';
+import { Capabilities } from '@/components/sections/Capabilities';
+import { Vision } from '@/components/sections/Vision';
+import { Differentiation } from '@/components/sections/Differentiation';
+import { Partnerships } from '@/components/sections/Partnerships';
+
 export default function Home() {
-  return <></>;
+  return (
+    <>
+      <Hero />
+      <CompanyOverview />
+      <VenturePortfolio />
+      <Capabilities />
+      <Vision />
+      <Differentiation />
+      <Partnerships />
+    </>
+  );
 }
