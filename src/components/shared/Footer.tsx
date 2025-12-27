@@ -26,6 +26,7 @@ export function Footer() {
                 <li><Link href="/mail" className="text-muted-foreground hover:text-primary">Neup Mail</Link></li>
                 <li><Link href="/design" className="text-muted-foreground hover:text-primary">Neup Design</Link></li>
                 <li><Link href="/jobs" className="text-muted-foreground hover:text-primary">Neup Jobs</Link></li>
+                <li><Link href="/socials" className="text-muted-foreground hover:text-primary">Neup Socials</Link></li>
                 <li><Link href="#" className="text-muted-foreground hover:text-primary">Katalyst</Link></li>
               </ul>
             </div>
@@ -55,3 +56,5 @@ export function Footer() {
     </footer>
   );
 }
+
+    

@@ -1,7 +1,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowUpRight, Plane, Megaphone, Zap, BrainCircuit, Mail, PenTool, Briefcase } from 'lucide-react';
+import { ArrowUpRight, Plane, Megaphone, Zap, BrainCircuit, Mail, PenTool, Briefcase, Share2 } from 'lucide-react';
 import Link from "next/link";
 import type { SVGProps } from "react";
 
@@ -40,6 +40,13 @@ const ventures = [
     description: "A talent gateway for builders to join the Neup ecosystem.",
     status: "Live",
     link: "/jobs",
+  },
+  {
+    logo: (props: SVGProps<SVGSVGElement>) => <Share2 {...props} />,
+    name: "Neup Socials",
+    description: "The distribution engine for the Neup ecosystem.",
+    status: "Building",
+    link: "/socials",
   },
   {
     logo: (props: SVGProps<SVGSVGElement>) => <Zap {...props} />,
@@ -103,3 +110,5 @@ export function VenturePortfolio() {
     </section>
   );
 }
+
+    
