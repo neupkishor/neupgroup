@@ -1,9 +1,26 @@
 
-import { Github, Twitter, Linkedin, Facebook, Instagram, Youtube } from 'lucide-react';
+'use client';
+import { Facebook, Instagram, Linkedin, Twitter, Youtube } from 'lucide-react';
 import { NeupLogo } from '@/components/NeupLogo';
 import Link from 'next/link';
+import { ventures } from '@/components/sections/VenturePortfolio';
+import { useState, useEffect } from 'react';
+
+// Function to shuffle array and get first N items
+function getShuffledVentures(array: typeof ventures, count: number) {
+  const shuffled = [...array].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, count);
+}
+
 
 export function Footer() {
+  const [randomVentures, setRandomVentures] = useState<typeof ventures>([]);
+
+  useEffect(() => {
+    setRandomVentures(getShuffledVentures(ventures, 8));
+  }, []);
+
+
   return (
     <footer className="border-t py-12 bg-card">
       <div className="container max-w-screen-2xl">
@@ -21,21 +38,17 @@ export function Footer() {
             <div>
               <h4 className="font-semibold mb-3">Ventures</h4>
               <ul className="space-y-2">
-                <li><Link href="/tourio" className="text-muted-foreground hover:text-primary">Tourio</Link></li>
-                <li><Link href="/marketing" className="text-muted-foreground hover:text-primary">Neup Marketing</Link></li>
-                <li><Link href="/mail" className="text-muted-foreground hover:text-primary">Neup Mail</Link></li>
-                <li><Link href="/design" className="text-muted-foreground hover:text-primary">Neup Design</Link></li>
-                <li><Link href="/jobs" className="text-muted-foreground hover:text-primary">Neup Jobs</Link></li>
-                <li><Link href="/socials" className="text-muted-foreground hover:text-primary">Neup Socials</Link></li>
-                <li><Link href="/neupid" className="text-muted-foreground hover:text-primary">NeupID</Link></li>
-                <li><Link href="/legis" className="text-muted-foreground hover:text-primary">Neup.Legis</Link></li>
-                <li><Link href="#" className="text-muted-foreground hover:text-primary">Katalyst</Link></li>
+                {randomVentures.map(venture => (
+                   <li key={venture.name}><Link href={venture.link} className="text-muted-foreground hover:text-primary">{venture.name}</Link></li>
+                ))}
+                 <li><Link href="/about/ventures" className="text-muted-foreground hover:text-primary font-medium">View All &rarr;</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-3">Company</h4>
               <ul className="space-y-2">
                 <li><Link href="/about/teams" className="text-muted-foreground hover:text-primary">Team</Link></li>
+                 <li><Link href="/about/ventures" className="text-muted-foreground hover:text-primary">Ventures</Link></li>
                 <li><Link href="/jobs" className="text-muted-foreground hover:text-primary">Careers</Link></li>
                 <li><Link href="/legal" className="text-muted-foreground hover:text-primary">Legal</Link></li>
                 <li><Link href="#contact" className="text-muted-foreground hover:text-primary">Partnerships</Link></li>
