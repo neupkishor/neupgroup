@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/ledger',
     '/heritage',
     '/hr',
+    '/suite',
   ];
 
   return routes.map((route) => ({
