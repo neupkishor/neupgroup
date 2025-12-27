@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import './globals.css';
 import { cn } from '@/lib/utils';
@@ -11,7 +12,7 @@ import { ThemeProvider } from '@/components/ThemeProvider';
 export const metadata: Metadata = {
   title: {
     default: 'Neup Group',
-    template: '%s | Neup Group',
+    template: '%s, Neup Group',
   },
   description: "A venture studio building the next generation of digital ventures from Nepal.",
 };
