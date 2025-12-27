@@ -20,7 +20,7 @@ const clients = [
   {
     name: "Yes Tourism Nepal",
     services: "Neup.Site",
-    icon: <Plane className="h-10 w-10 text-primary" />,
+    icon: "https://neupgroup.com/content/p3yestourismnepal/logo.full.svg",
     slug: "yes-tourism-nepal-dynamic-news-site",
   },
   {
