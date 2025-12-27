@@ -10,7 +10,7 @@ const ventures = [
     name: "Tourio",
     description: "The operating system for travel and tour operators in Nepal.",
     status: "Live",
-    link: "#",
+    link: "/tourio",
   },
   {
     logo: (props: SVGProps<SVGSVGElement>) => <Megaphone {...props} />,
