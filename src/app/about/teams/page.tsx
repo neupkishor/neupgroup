@@ -1,3 +1,4 @@
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
 import { NeupLogo } from "@/components/NeupLogo";
@@ -107,12 +108,12 @@ export default function TeamsPage() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="py-20 md:py-32 bg-card">
-          <div className="container text-center">
-            <NeupLogo className="h-16 w-16 mx-auto text-primary" />
-            <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter mt-6">
-              The People Building Neup Group
+          <div className="container">
+            <NeupLogo className="h-16 w-16 text-primary" />
+            <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter mt-6 max-w-4xl">
+              Meet the People Building the Future of Nepal's Digital Ecosystem
             </h1>
-            <p className="max-w-2xl mx-auto mt-4 text-muted-foreground md:text-xl">
+            <p className="max-w-2xl mt-4 text-muted-foreground md:text-xl">
               We are a collective of thinkers, builders, and strategists united by a mission to build Nepal's digital future.
             </p>
           </div>
@@ -120,23 +121,25 @@ export default function TeamsPage() {
 
         {/* Leadership Section */}
         <section className="py-20 md:py-28">
-            <div className="container max-w-4xl">
-                <div className="text-center">
+            <div className="container max-w-5xl">
+                <div>
                     <h2 className="font-headline text-3xl md:text-4xl font-bold">Leadership</h2>
-                    <p className="max-w-2xl mx-auto mt-2 text-muted-foreground">
+                    <p className="max-w-2xl mt-2 text-muted-foreground">
                         Guiding the vision and strategy of Neup Group.
                     </p>
                 </div>
-                <div className="mt-12 flex justify-center">
+                <div className="mt-12">
                     {leadership.map((member) => (
-                    <div key={member.name} className="flex flex-col items-center text-center max-w-sm">
-                        <Avatar className="h-32 w-32 border-4 border-primary">
+                    <div key={member.name} className="flex flex-col sm:flex-row items-start text-left gap-8">
+                        <Avatar className="h-32 w-32 border-4 border-primary flex-shrink-0">
                             <AvatarImage src={member.imageUrl} alt={member.name} />
                             <AvatarFallback>{member.initials}</AvatarFallback>
                         </Avatar>
-                        <h3 className="text-2xl font-bold mt-6">{member.name}</h3>
-                        <p className="text-primary font-semibold">{member.role}</p>
-                        <p className="mt-2 text-muted-foreground">{member.bio}</p>
+                        <div>
+                            <h3 className="text-2xl font-bold">{member.name}</h3>
+                            <p className="text-primary font-semibold">{member.role}</p>
+                            <p className="mt-2 text-muted-foreground max-w-md">{member.bio}</p>
+                        </div>
                     </div>
                     ))}
                 </div>
@@ -147,15 +150,15 @@ export default function TeamsPage() {
         {teams.map((team) => (
           <section key={team.name} className="py-20 md:py-28 bg-card last:pb-28">
             <div className="container">
-              <div className="text-center mb-12">
+              <div className="mb-12">
                 <h2 className="font-headline text-3xl md:text-4xl font-bold">{team.name}</h2>
-                <p className="max-w-2xl mx-auto mt-2 text-muted-foreground">
+                <p className="max-w-2xl mt-2 text-muted-foreground">
                   The talented individuals driving our {team.name.toLowerCase()} efforts.
                 </p>
               </div>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 md:gap-8 max-w-7xl mx-auto">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 md:gap-8 max-w-7xl">
                 {team.members.map((member) => (
-                    <div key={member.name} className="flex flex-col items-center text-center">
+                    <div key={member.name} className="flex flex-col items-start text-left">
                         <Avatar className="h-24 w-24">
                             <AvatarImage src={member.imageUrl} alt={member.name} />
                             <AvatarFallback>{member.initials}</AvatarFallback>
