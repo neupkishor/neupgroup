@@ -1,3 +1,4 @@
+
 import { Hero } from '@/components/sections/Hero';
 import { CompanyOverview } from '@/components/sections/CompanyOverview';
 import { VenturePortfolio } from '@/components/sections/VenturePortfolio';
@@ -8,7 +9,7 @@ import { Partnerships } from '@/components/sections/Partnerships';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Home',
+  title: 'Homepage',
 };
 
 
