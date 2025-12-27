@@ -1,104 +1,30 @@
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Card, CardContent } from "@/components/ui/card";
-import { NeupLogo } from "@/components/NeupLogo";
 
-const leadership = [
+const teamMembers = [
   {
-    name: "Kishor Kc",
+    name: "Kishor Neupane",
     role: "Founder & CEO",
-    imageUrl: "https://picsum.photos/seed/kishor/200/200",
-    initials: "KK",
-    bio: "Visionary leader with a passion for building scalable digital ecosystems from Nepal.",
-  },
-];
-
-const teams = [
-  {
-    name: "Management",
-    members: [
-      {
-        name: "Jane Doe",
-        role: "Chief Operating Officer",
-        imageUrl: "https://picsum.photos/seed/jane/200/200",
-        initials: "JD",
-      },
-      {
-        name: "John Smith",
-        role: "Chief Technology Officer",
-        imageUrl: "https://picsum.photos/seed/john/200/200",
-        initials: "JS",
-      },
-      {
-        name: "Emily White",
-        role: "Head of Product",
-        imageUrl: "https://picsum.photos/seed/emily/200/200",
-        initials: "EW",
-      },
-    ],
+    imageUrl: "https://neupgroup.com/assets/members/neupkishor.png",
+    initials: "KN",
   },
   {
-    name: "Product & Engineering",
-    members: [
-      {
-        name: "Michael Brown",
-        role: "Senior Software Engineer",
-        imageUrl: "https://picsum.photos/seed/michael/200/200",
-        initials: "MB",
-      },
-      {
-        name: "Sarah Green",
-        role: "Backend Developer",
-        imageUrl: "https://picsum.photos/seed/sarah/200/200",
-        initials: "SG",
-      },
-      {
-        name: "David Black",
-        role: "Frontend Developer",
-        imageUrl: "https://picsum.photos/seed/david/200/200",
-        initials: "DB",
-      },
-      {
-        name: "Laura Blue",
-        role: "QA Engineer",
-        imageUrl: "https://picsum.photos/seed/laura/200/200",
-        initials: "LB",
-      },
-    ],
+    name: "Bhawani Khanal",
+    role: "Marketing Head",
+    imageUrl: "https://neupgroup.com/assets/members/khanalcwani.png",
+    initials: "BK",
   },
   {
-    name: "Design",
-    members: [
-      {
-        name: "Chris Yellow",
-        role: "Lead Product Designer",
-        imageUrl: "https://picsum.photos/seed/chris/200/200",
-        initials: "CY",
-      },
-      {
-        name: "Amanda Purple",
-        role: "UI/UX Designer",
-        imageUrl: "https://picsum.photos/seed/amanda/200/200",
-        initials: "AP",
-      },
-    ],
+    name: "Sandesh Shrestha",
+    role: "Development Head",
+    imageUrl: "https://neupgroup.com/assets/members/sandeshshrestha.png",
+    initials: "SS",
   },
   {
-    name: "Marketing & Growth",
-    members: [
-      {
-        name: "Olivia Red",
-        role: "Growth Marketer",
-        imageUrl: "https://picsum.photos/seed/olivia/200/200",
-        initials: "OR",
-      },
-      {
-        name: "Peter Orange",
-        role: "Content Strategist",
-        imageUrl: "https://picsum.photos/seed/peter/200/200",
-        initials: "PO",
-      },
-    ],
+    name: "Aakash Pun Magar",
+    role: "Cybersecurity Head",
+    imageUrl: "https://neupgroup.com/assets/members/aakashpun.png",
+    initials: "AP",
   },
 ];
 
@@ -109,68 +35,33 @@ export default function TeamsPage() {
         {/* Hero Section */}
         <section className="py-20 md:py-32 bg-card">
           <div className="container">
-            <NeupLogo className="h-16 w-16 text-primary" />
-            <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter mt-6 max-w-4xl">
-              Meet the People Building the Future of Nepal's Digital Ecosystem
+            <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter max-w-4xl">
+              Meet Our Team
             </h1>
             <p className="max-w-2xl mt-4 text-muted-foreground md:text-xl">
-              We are a collective of thinkers, builders, and strategists united by a mission to build Nepal's digital future.
+              Our team is dedicated to making your experience unforgettable. Get to know the people behind Neup Group.
             </p>
           </div>
         </section>
 
-        {/* Leadership Section */}
+        {/* Team Grid Section */}
         <section className="py-20 md:py-28">
-            <div className="container max-w-5xl">
-                <div>
-                    <h2 className="font-headline text-3xl md:text-4xl font-bold">Leadership</h2>
-                    <p className="max-w-2xl mt-2 text-muted-foreground">
-                        Guiding the vision and strategy of Neup Group.
-                    </p>
-                </div>
-                <div className="mt-12">
-                    {leadership.map((member) => (
-                    <div key={member.name} className="flex flex-col sm:flex-row items-start text-left gap-8">
-                        <Avatar className="h-32 w-32 border-4 border-primary flex-shrink-0 rounded-lg">
-                            <AvatarImage src={member.imageUrl} alt={member.name} />
-                            <AvatarFallback>{member.initials}</AvatarFallback>
-                        </Avatar>
-                        <div>
-                            <h3 className="text-2xl font-bold">{member.name}</h3>
-                            <p className="text-primary font-semibold">{member.role}</p>
-                            <p className="mt-2 text-muted-foreground max-w-md">{member.bio}</p>
-                        </div>
-                    </div>
-                    ))}
-                </div>
-            </div>
-        </section>
-
-        {/* Teams Sections */}
-        {teams.map((team) => (
-          <section key={team.name} className="py-20 md:py-28 bg-card last:pb-28">
             <div className="container">
-              <div className="mb-12">
-                <h2 className="font-headline text-3xl md:text-4xl font-bold">{team.name}</h2>
-                <p className="max-w-2xl mt-2 text-muted-foreground">
-                  The talented individuals driving our {team.name.toLowerCase()} efforts.
-                </p>
-              </div>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 md:gap-8 max-w-7xl">
-                {team.members.map((member) => (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                {teamMembers.map((member) => (
                     <div key={member.name} className="flex flex-col items-start text-left">
-                        <Avatar className="h-24 w-24 rounded-lg">
-                            <AvatarImage src={member.imageUrl} alt={member.name} />
-                            <AvatarFallback>{member.initials}</AvatarFallback>
-                        </Avatar>
-                        <h4 className="font-semibold mt-4">{member.name}</h4>
-                        <p className="text-sm text-muted-foreground">{member.role}</p>
+                        <img 
+                            src={member.imageUrl} 
+                            alt={member.name} 
+                            className="w-full aspect-square object-cover rounded-lg"
+                        />
+                        <h3 className="font-bold text-xl mt-4">{member.name}</h3>
+                        <p className="text-primary font-semibold">{member.role}</p>
                     </div>
                 ))}
               </div>
             </div>
-          </section>
-        ))}
+        </section>
       </main>
     </div>
   );
