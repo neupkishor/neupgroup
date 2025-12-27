@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/neupid',
     '/socials',
     '/tourio',
+    '/works',
   ];
 
   return routes.map((route) => ({

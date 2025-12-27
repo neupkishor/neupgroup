@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowUpRight } from 'lucide-react';
 import Link from "next/link";
-import { ventures } from '@/components/sections/VenturePortfolio.config';
+import { ventures, type Venture } from '@/components/sections/VenturePortfolio.config';
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 
@@ -25,7 +25,7 @@ function getShuffledVentures(array: typeof ventures, count: number) {
 
 
 export function VenturePortfolio() {
-  const [randomVentures, setRandomVentures] = useState<typeof ventures>([]);
+  const [randomVentures, setRandomVentures] = useState<Venture[]>([]);
 
   useEffect(() => {
     setRandomVentures(getShuffledVentures(ventures, 5));

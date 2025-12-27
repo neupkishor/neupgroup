@@ -1,8 +1,15 @@
+import type { LucideIcon } from "lucide-react";
+import { Plane, Megaphone, Zap, BrainCircuit, Mail, PenTool, Briefcase, Share2, KeyRound, Gavel, Cog } from 'lucide-react';
 
-import type { SVGProps } from "react";
-import { Plane, Megaphone, Zap, BrainCircuit, Mail, PenTool, Briefcase, Share2, KeyRound, Gavel } from 'lucide-react';
+export interface Venture {
+  logo: LucideIcon;
+  name: string;
+  description: string;
+  status: string;
+  link: string;
+}
 
-export const ventures = [
+export const ventures: Venture[] = [
   {
     logo: Plane,
     name: "Tourio",
@@ -37,6 +44,13 @@ export const ventures = [
     description: "A talent gateway for builders to join the Neup ecosystem.",
     status: "Live",
     link: "/jobs",
+  },
+  {
+    logo: Cog,
+    name: "Neup.Works",
+    description: "Nepal’s marketplace for talent & projects.",
+    status: "Building",
+    link: "/works",
   },
   {
     logo: Share2,
