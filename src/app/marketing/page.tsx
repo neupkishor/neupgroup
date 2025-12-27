@@ -58,15 +58,15 @@ export default function MarketingPage() {
     <div className="flex flex-col min-h-screen">
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-20 md:py-32 lg:py-40 text-center bg-card">
+        <section className="py-20 md:py-32 lg:py-40 bg-card">
           <div className="container">
-            <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
+            <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter max-w-3xl">
               Marketing Built for Scale, Not Vanity
             </h1>
-            <p className="max-w-3xl mx-auto mt-4 text-muted-foreground md:text-xl">
+            <p className="max-w-3xl mt-4 text-muted-foreground md:text-xl">
               Neup.Marketing designs growth systems that turn traffic into revenue, brands into assets, and marketing into a predictable engine.
             </p>
-            <div className="mt-8 flex justify-center gap-4">
+            <div className="mt-8 flex justify-start gap-4">
               <Button size="lg" asChild>
                 <Link href="mailto:growth@neup.group">Start a Growth Conversation</Link>
               </Button>
@@ -80,7 +80,7 @@ export default function MarketingPage() {
         {/* Credibility Strip */}
         <section className="py-8 bg-background border-y">
           <div className="container">
-            <div className="grid md:grid-cols-2 gap-4 text-center text-sm text-muted-foreground">
+            <div className="grid md:grid-cols-2 gap-4 text-sm text-muted-foreground">
                 <p>Trusted by in-house ventures and partner brands under Neup Group.</p>
                 <p>Built by operators, not theorists. Executed with performance in mind.</p>
             </div>
@@ -89,7 +89,7 @@ export default function MarketingPage() {
 
         {/* What We Do */}
         <section className="py-20 md:py-28">
-            <div className="container text-center max-w-4xl mx-auto">
+            <div className="container max-w-4xl">
                 <h2 className="font-headline text-3xl md:text-4xl font-bold">
                     What We Actually Do
                 </h2>
@@ -105,9 +105,9 @@ export default function MarketingPage() {
         {/* Core Capabilities */}
         <section id="capabilities" className="py-20 md:py-28 bg-card">
           <div className="container">
-            <div className="text-center mb-12">
+            <div className="mb-12">
               <h2 className="font-headline text-3xl md:text-4xl font-bold">Core Capabilities</h2>
-              <p className="max-w-2xl mx-auto mt-4 text-muted-foreground">
+              <p className="max-w-2xl mt-4 text-muted-foreground">
                 We apply a system-level framework to build a robust marketing foundation.
               </p>
             </div>
@@ -154,8 +154,8 @@ export default function MarketingPage() {
 
         {/* Who This Is For */}
         <section className="py-20 md:py-28 bg-card">
-            <div className="container max-w-4xl mx-auto">
-                <div className="text-center">
+            <div className="container max-w-4xl">
+                <div>
                      <h2 className="font-headline text-3xl md:text-4xl font-bold">Who This Is For</h2>
                      <p className="mt-4 text-muted-foreground">Neup.Marketing works best with businesses ready for systematic growth.</p>
                 </div>
@@ -167,7 +167,7 @@ export default function MarketingPage() {
                         </Card>
                     ))}
                 </div>
-                <div className="mt-10 text-center p-6 bg-background rounded-lg">
+                <div className="mt-10 p-6 bg-background rounded-lg">
                     <p className="font-bold text-lg">If you want “cheap marketing,” this isn’t it.</p>
                     <p className="text-lg text-primary font-semibold">If you want marketing that compounds, you’re in the right place.</p>
                 </div>
@@ -176,8 +176,8 @@ export default function MarketingPage() {
 
         {/* How We Engage */}
         <section className="py-20 md:py-28">
-            <div className="container max-w-5xl mx-auto">
-                <div className="text-center mb-12">
+            <div className="container max-w-5xl">
+                <div className="mb-12">
                      <h2 className="font-headline text-3xl md:text-4xl font-bold">How We Engage</h2>
                      <p className="mt-4 text-muted-foreground">Our process is simple, serious, and built on clarity.</p>
                 </div>
@@ -195,7 +195,7 @@ export default function MarketingPage() {
                         </div>
                     ))}
                 </div>
-                 <div className="mt-10 text-center">
+                 <div className="mt-10">
                     <p className="text-lg font-medium">No retainers without direction. No campaigns without purpose.</p>
                 </div>
             </div>
@@ -219,8 +219,8 @@ export default function MarketingPage() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-20 md:py-28 text-center">
-          <div className="container max-w-3xl mx-auto">
+        <section className="py-20 md:py-28">
+          <div className="container max-w-3xl">
             <h2 className="font-headline text-3xl md:text-4xl font-bold">
               Ready to build marketing that actually grows your business?
             </h2>
