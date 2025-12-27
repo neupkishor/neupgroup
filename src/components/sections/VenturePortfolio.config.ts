@@ -27,7 +27,7 @@ export const ventures: Venture[] = [
   },
   {
     logo: Megaphone,
-    name: "Neup Marketing",
+    name: "Neup.Marketing",
     description: "A modern marketing agency for the new generation of brands.",
     status: "Live",
     link: "/marketing",
@@ -48,21 +48,21 @@ export const ventures: Venture[] = [
   },
   {
     logo: Mail,
-    name: "Neup Mail",
+    name: "Neup.Mail",
     description: "A privacy-focused email service that respects its users.",
     status: "Beta",
     link: "/mail",
   },
   {
     logo: PenTool,
-    name: "Neup Design",
+    name: "Neup.Design",
     description: "A product and brand design studio for ambitious companies.",
     status: "Live",
     link: "/design",
   },
   {
     logo: Briefcase,
-    name: "Neup Jobs",
+    name: "Neup.Jobs",
     description: "A talent gateway for builders to join the Neup ecosystem.",
     status: "Live",
     link: "/jobs",
@@ -90,7 +90,7 @@ export const ventures: Venture[] = [
   },
   {
     logo: Share2,
-    name: "Neup Socials",
+    name: "Neup.Socials",
     description: "The distribution engine for the Neup ecosystem.",
     status: "Building",
     link: "/socials",

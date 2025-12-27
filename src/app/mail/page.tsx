@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -6,7 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: 'Neup Mail',
+  title: 'Neup.Mail',
 };
 
 const features = [
@@ -67,7 +68,7 @@ export default function MailPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6">
                     <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
-                        Introducing Neup Mail
+                        Introducing Neup.Mail
                     </div>
                     <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
                         Email That Respects You.
@@ -84,7 +85,7 @@ export default function MailPage() {
                 <div className="flex justify-center">
                     <Image 
                         src="https://picsum.photos/seed/neup-mail/600/500" 
-                        alt="Neup Mail Interface" 
+                        alt="Neup.Mail Interface" 
                         width={600}
                         height={500}
                         className="rounded-lg shadow-xl"
@@ -101,7 +102,7 @@ export default function MailPage() {
             <div className="mb-12 text-center">
               <h2 className="font-headline text-3xl md:text-4xl font-bold">A Better Email Experience</h2>
               <p className="max-w-2xl mx-auto mt-4 text-muted-foreground">
-                We built Neup Mail from the ground up with your privacy and productivity in mind.
+                We built Neup.Mail from the ground up with your privacy and productivity in mind.
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -167,7 +168,7 @@ export default function MailPage() {
               Take Back Control of Your Inbox.
             </h2>
             <p className="mt-4 text-muted-foreground md:text-lg">
-              Join the growing community of users who choose privacy. Create your free Neup Mail account today.
+              Join the growing community of users who choose privacy. Create your free Neup.Mail account today.
             </p>
             <div className="mt-8">
               <Button size="lg" asChild>

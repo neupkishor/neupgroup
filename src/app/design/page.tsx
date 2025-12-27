@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -56,7 +57,7 @@ export default function DesignPage() {
                       Design That Creates Value.
                     </h1>
                     <p className="max-w-2xl mt-4 text-muted-foreground md:text-xl">
-                      Neup.design is a product and brand design studio. We partner with ambitious companies to build meaningful brands and user-centric products.
+                      Neup.Design is a product and brand design studio. We partner with ambitious companies to build meaningful brands and user-centric products.
                     </p>
                     <div className="mt-8 flex justify-start gap-4">
                       <Button size="lg" asChild>
