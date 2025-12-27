@@ -9,7 +9,7 @@ import { Partnerships } from '@/components/sections/Partnerships';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Homepage',
+  title: 'Home',
 };
 
 
