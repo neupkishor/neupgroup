@@ -27,6 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/suite',
     '/search',
     '/ads',
+    '/analytics',
   ];
 
   return routes.map((route) => ({
