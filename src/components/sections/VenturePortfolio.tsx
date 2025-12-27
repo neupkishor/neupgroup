@@ -7,6 +7,7 @@ import { ArrowUpRight } from 'lucide-react';
 import Link from "next/link";
 import { ventures } from '@/components/sections/VenturePortfolio.config';
 import { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
 
 
 const statusStyles: { [key: string]: string } = {
@@ -27,7 +28,7 @@ export function VenturePortfolio() {
   const [randomVentures, setRandomVentures] = useState<typeof ventures>([]);
 
   useEffect(() => {
-    setRandomVentures(getShuffledVentures(ventures, 6));
+    setRandomVentures(getShuffledVentures(ventures, 5));
   }, []);
 
   return (
@@ -64,9 +65,15 @@ export function VenturePortfolio() {
             </Link>
           ))}
         </div>
+        <div className="mt-12 text-center">
+            <Button asChild variant="outline">
+                <Link href="/about/ventures">
+                    View All Ventures
+                    <ArrowUpRight className="ml-2 h-4 w-4" />
+                </Link>
+            </Button>
+        </div>
       </div>
     </section>
   );
 }
-
-    

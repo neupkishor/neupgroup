@@ -17,7 +17,7 @@ export function Footer() {
   const [randomVentures, setRandomVentures] = useState<typeof ventures>([]);
 
   useEffect(() => {
-    setRandomVentures(getShuffledVentures(ventures, 6));
+    setRandomVentures(getShuffledVentures(ventures, 5));
   }, []);
 
 
