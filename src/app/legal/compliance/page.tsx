@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 
 const companyDetails = [
     { label: "Company Name", value: "Neup Group Private Limited" },
-    { label: "Company Registration Number", value: "305147/079/080" },
-    { label: "PAN Number", value: "610355411" },
+    { label: "Company Registration Number", value: "334689/80/081" },
+    { label: "PAN Number", value: "621121607" },
     { label: "D-U-N-S® Number", value: "Coming Soon" },
 ];
 
