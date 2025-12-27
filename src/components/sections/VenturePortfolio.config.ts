@@ -67,6 +67,13 @@ export const ventures: Venture[] = [
     status: "Live",
     link: "/jobs",
   },
+    {
+    logo: Newspaper,
+    name: "Neup.Blog",
+    description: "Insights, stories, and updates from the Neup Group team.",
+    status: "Live",
+    link: "/blog",
+  },
   {
     logo: Cog,
     name: "Neup.Works",
