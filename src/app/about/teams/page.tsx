@@ -131,7 +131,7 @@ export default function TeamsPage() {
                 <div className="mt-12">
                     {leadership.map((member) => (
                     <div key={member.name} className="flex flex-col sm:flex-row items-start text-left gap-8">
-                        <Avatar className="h-32 w-32 border-4 border-primary flex-shrink-0">
+                        <Avatar className="h-32 w-32 border-4 border-primary flex-shrink-0 rounded-lg">
                             <AvatarImage src={member.imageUrl} alt={member.name} />
                             <AvatarFallback>{member.initials}</AvatarFallback>
                         </Avatar>
@@ -159,7 +159,7 @@ export default function TeamsPage() {
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 md:gap-8 max-w-7xl">
                 {team.members.map((member) => (
                     <div key={member.name} className="flex flex-col items-start text-left">
-                        <Avatar className="h-24 w-24">
+                        <Avatar className="h-24 w-24 rounded-lg">
                             <AvatarImage src={member.imageUrl} alt={member.name} />
                             <AvatarFallback>{member.initials}</AvatarFallback>
                         </Avatar>
