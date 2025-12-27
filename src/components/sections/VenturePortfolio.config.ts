@@ -151,11 +151,4 @@ export const ventures: Venture[] = [
     status: "Live",
     link: "/manage",
   },
-  {
-    logo: Zap,
-    name: "Katalyst",
-    description: "AI-powered tools to accelerate digital content creation.",
-    status: "Building",
-    link: "#",
-  },
 ];
