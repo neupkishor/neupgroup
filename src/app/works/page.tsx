@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, ShieldCheck, Zap, User, Search, MessageSquare, CreditCard, Award, Star, ArrowRight, Rss, Briefcase, Code, Pencil, Megaphone } from "lucide-react";
+import { CheckCircle, ShieldCheck, Zap, User, Search, MessageSquare, CreditCard, Award, Star, ArrowRight, Rss, Briefcase, Code, Pencil, Megaphone, Users } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
