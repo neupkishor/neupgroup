@@ -28,22 +28,40 @@ export function ProgressBar() {
   useEffect(() => {
     NProgress.configure({ showSpinner: false });
 
-    const originalFetch = window.fetch;
-    window.fetch = async function (...args) {
-      // Don't show the progress bar for Genkit flow requests.
-      if (typeof args[0] === 'string' && args[0].includes('/flows/')) {
-        return originalFetch(...args);
-      }
-      if (NProgress.isStarted() === false) {
-        NProgress.start();
-      }
-      try {
-        return await originalFetch(...args);
-      } catch (error) {
-        NProgress.done();
-        throw error;
-      }
+    const handleClick = (event: MouseEvent) => {
+        const target = event.target as HTMLElement;
+        const anchor = target.closest('a');
+
+        if (anchor) {
+            const href = anchor.getAttribute('href');
+            const targetAttr = anchor.getAttribute('target');
+
+            // Don't show for mailto, tel links or links opening in a new tab
+            if (href && (href.startsWith('mailto:') || href.startsWith('tel:') || targetAttr === '_blank')) {
+                return;
+            }
+            
+            // Don't show for same-page hash links
+            if (href && href.startsWith('#')) {
+                return;
+            }
+            
+            // Don't show for links to the same page (with or without hash)
+            const currentUrl = new URL(window.location.href);
+            const targetUrl = new URL(anchor.href, window.location.href);
+
+            if (currentUrl.origin === targetUrl.origin && currentUrl.pathname === targetUrl.pathname && currentUrl.search === targetUrl.search && href.includes('#')) {
+                return;
+            }
+
+            if (NProgress.isStarted() === false) {
+                 NProgress.start();
+            }
+        }
     };
+
+    document.addEventListener('click', handleClick);
+
 
     // This is a workaround for a bug in Next.js where the progress bar
     // doesn't finish when the user navigates to a page with a full
@@ -70,7 +88,7 @@ export function ProgressBar() {
     });
 
     return () => {
-      window.fetch = originalFetch;
+      document.removeEventListener('click', handleClick);
       observer.disconnect();
     };
   }, []);
