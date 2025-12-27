@@ -1,3 +1,4 @@
+
 import { Github, Twitter, Linkedin } from 'lucide-react';
 import { NeupLogo } from '@/components/NeupLogo';
 import Link from 'next/link';
@@ -24,6 +25,7 @@ export function Footer() {
                 <li><Link href="/marketing" className="text-muted-foreground hover:text-primary">Neup Marketing</Link></li>
                 <li><Link href="/mail" className="text-muted-foreground hover:text-primary">Neup Mail</Link></li>
                 <li><Link href="/design" className="text-muted-foreground hover:text-primary">Neup Design</Link></li>
+                <li><Link href="/jobs" className="text-muted-foreground hover:text-primary">Neup Jobs</Link></li>
                 <li><Link href="#" className="text-muted-foreground hover:text-primary">Katalyst</Link></li>
               </ul>
             </div>
@@ -31,8 +33,8 @@ export function Footer() {
               <h4 className="font-semibold mb-3">Company</h4>
               <ul className="space-y-2">
                 <li><Link href="#vision" className="text-muted-foreground hover:text-primary">About</Link></li>
+                <li><Link href="/jobs" className="text-muted-foreground hover:text-primary">Careers</Link></li>
                 <li><Link href="/legal" className="text-muted-foreground hover:text-primary">Legal</Link></li>
-                <li><Link href="#contact" className="text-muted-foreground hover:text-primary">Careers</Link></li>
                 <li><Link href="#contact" className="text-muted-foreground hover:text-primary">Partnerships</Link></li>
               </ul>
             </div>
