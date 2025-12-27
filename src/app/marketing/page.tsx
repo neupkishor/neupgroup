@@ -1,8 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Target, Briefcase, BarChart, Settings, Rocket } from "lucide-react";
+import { CheckCircle, Target, Briefcase, BarChart, Settings, Rocket, Building2, Mountain, ToyBrick, ShoppingCart, Quote } from "lucide-react";
 import Link from "next/link";
 import { NeupLogo } from "@/components/NeupLogo";
+import Image from "next/image";
 
 const capabilities = [
   {
@@ -52,6 +53,26 @@ const engagementSteps = [
     { name: "Execution & Optimization", description: "Build, test, scale" },
     { name: "Measurement & Iteration", description: "Decisions backed by data" },
 ];
+
+const clients = [
+    { name: "Everest Travels", icon: <Mountain className="h-8 w-8" /> },
+    { name: "Urban Builders", icon: <Building2 className="h-8 w-8" /> },
+    { name: "Himalayan Goods", icon: <ShoppingCart className="h-8 w-8" /> },
+    { name: "Kidsoft Play", icon: <ToyBrick className="h-8 w-8" /> },
+]
+
+const testimonials = [
+    {
+        quote: "Neup.Marketing built a system that fundamentally changed how we acquire customers. We're not just getting traffic; we're getting revenue.",
+        author: "A. Sherpa",
+        company: "CEO, Everest Travels"
+    },
+    {
+        quote: "Their team thinks like owners. The level of strategic input and accountability is something we hadn't found in other agencies.",
+        author: "R. Pradhan",
+        company: "Founder, Urban Builders"
+    }
+]
 
 export default function MarketingPage() {
   return (
@@ -174,6 +195,46 @@ export default function MarketingPage() {
             </div>
         </section>
 
+        {/* Our Clients Section */}
+        <section className="py-20 md:py-28">
+            <div className="container max-w-5xl">
+                <div className="text-center mb-12">
+                     <h2 className="font-headline text-3xl md:text-4xl font-bold">Trusted by Forward-Thinking Brands</h2>
+                     <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">We partner with ambitious companies to build durable market presence.</p>
+                </div>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center text-muted-foreground">
+                    {clients.map((client) => (
+                        <div key={client.name} className="flex justify-center items-center gap-2 grayscale opacity-60 hover:opacity-100 hover:grayscale-0 transition-all">
+                            {client.icon}
+                            <span className="font-bold text-lg">{client.name}</span>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+
+        {/* Reviews Section */}
+        <section className="py-20 md:py-28 bg-card">
+            <div className="container max-w-5xl">
+                <div className="text-center mb-12">
+                     <h2 className="font-headline text-3xl md:text-4xl font-bold">What Our Partners Say</h2>
+                     <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">Our success is measured by the success of our partners.</p>
+                </div>
+                <div className="grid md:grid-cols-2 gap-8">
+                    {testimonials.map((testimonial) => (
+                        <Card key={testimonial.author} className="bg-background">
+                            <CardContent className="pt-6">
+                                <Quote className="h-8 w-8 text-muted-foreground mb-4" />
+                                <p className="text-lg font-medium mb-4">"{testimonial.quote}"</p>
+                                <div className="font-semibold">{testimonial.author}</div>
+                                <div className="text-sm text-muted-foreground">{testimonial.company}</div>
+                            </CardContent>
+                        </Card>
+                    ))}
+                </div>
+            </div>
+        </section>
+
         {/* How We Engage */}
         <section className="py-20 md:py-28">
             <div className="container max-w-5xl">
@@ -212,7 +273,13 @@ export default function MarketingPage() {
                         <p className="font-semibold">This gives us: Cross-venture insights, an in-house product mindset, and long-term thinking over short-term billing.</p>
                     </div>
                     <div className="flex justify-center">
-                        <img src="https://picsum.photos/seed/neup-marketing/500/400" alt="Neup Group Ecosystem" className="rounded-lg shadow-xl" data-ai-hint="digital ecosystem" />
+                        <Image 
+                            src="https://picsum.photos/seed/neup-marketing/500/400" 
+                            alt="Neup Group Ecosystem" 
+                            width={500}
+                            height={400}
+                            className="rounded-lg shadow-xl" 
+                            data-ai-hint="digital ecosystem" />
                     </div>
                 </div>
             </div>
