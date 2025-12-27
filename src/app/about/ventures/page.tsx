@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import {
   ventures,
@@ -41,7 +42,7 @@ export default function VenturesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {ventures.map((venture) => (
                 <Link href={venture.link} key={venture.name} className="group block">
-                  <Card className="h-full flex flex-col transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:-translate-y-1">
+                  <Card className="h-full flex flex-col hover:border-primary/50 hover:shadow-lg hover:-translate-y-1 transition-transform duration-300">
                     <CardHeader>
                       <div className="flex items-start justify-between">
                         <div className="flex items-center gap-4">

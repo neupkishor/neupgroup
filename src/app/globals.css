@@ -105,7 +105,7 @@
 @layer base {
   * {
     @apply border-border;
-    transition: background-color 700ms ease, color 700ms ease, border-color 700ms ease;
+    transition: background-color 700ms ease-in-out, color 700ms ease-in-out, border-color 700ms ease-in-out;
   }
   body {
     @apply bg-background text-foreground;
