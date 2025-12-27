@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/tourio',
     '/works',
     '/estate',
+    '/site',
   ];
 
   return routes.map((route) => ({
