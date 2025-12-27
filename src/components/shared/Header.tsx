@@ -9,11 +9,13 @@ import { ThemeSwitcher } from '@/components/ThemeSwitcher';
 import { ventures } from '@/components/sections/VenturePortfolio.config';
 import { useTypewriter } from '@/hooks/useTypewriter';
 import { useEffect, useState } from 'react';
+import { ArrowLeft } from 'lucide-react';
 
 export function Header() {
   const pathname = usePathname();
   const [targetTitle, setTargetTitle] = useState('Neup.Group');
   const [headerLink, setHeaderLink] = useState('/');
+  const [isLogoHovered, setIsLogoHovered] = useState(false);
 
   useEffect(() => {
     const getHeaderInfo = () => {
@@ -38,17 +40,35 @@ export function Header() {
   
   const animatedTitle = useTypewriter(targetTitle);
 
+  const isHomePage = pathname === '/';
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 max-w-screen-2xl items-center justify-between">
         {/* Left Section: Logo */}
         <div className="flex items-center">
-          <Link href={headerLink} className="flex items-center space-x-2">
-            <NeupLogo className="h-6 w-6 text-primary" />
-            <span className="font-bold sm:inline-block font-headline min-w-[150px]">
-              {animatedTitle}
-            </span>
-          </Link>
+          <div 
+            className="flex items-center space-x-2"
+            onMouseEnter={() => !isHomePage && setIsLogoHovered(true)}
+            onMouseLeave={() => setIsLogoHovered(false)}
+          >
+            <Link href="/" aria-label="Back to Neup Group Homepage" className={`relative h-6 w-6 ${isHomePage ? 'cursor-default' : ''}`}>
+              <div className={`transition-opacity duration-300 ${isLogoHovered ? 'opacity-0' : 'opacity-100'}`}>
+                <NeupLogo className="h-6 w-6 text-primary" />
+              </div>
+              {!isHomePage && (
+                <div className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${isLogoHovered ? 'opacity-100' : 'opacity-0'}`}>
+                  <ArrowLeft className="h-6 w-6 text-primary" />
+                </div>
+              )}
+            </Link>
+            
+            <Link href={headerLink}>
+              <span className="font-bold sm:inline-block font-headline min-w-[150px]">
+                {animatedTitle}
+              </span>
+            </Link>
+          </div>
         </div>
 
         {/* Center Section: Navigation */}
