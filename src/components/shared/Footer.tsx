@@ -1,5 +1,5 @@
 
-import { Github, Twitter, Linkedin } from 'lucide-react';
+import { Github, Twitter, Linkedin, Facebook, Instagram, Youtube } from 'lucide-react';
 import { NeupLogo } from '@/components/NeupLogo';
 import Link from 'next/link';
 
@@ -44,9 +44,11 @@ export function Footer() {
             <div>
               <h4 className="font-semibold mb-3">Connect</h4>
               <div className="flex space-x-4">
-                <Link href="#" aria-label="Twitter" className="text-muted-foreground hover:text-primary"><Twitter /></Link>
-                <Link href="#" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary"><Linkedin /></Link>
-                <Link href="#" aria-label="GitHub" className="text-muted-foreground hover:text-primary"><Github /></Link>
+                <Link href="https://facebook.com/neupgroup" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-muted-foreground hover:text-primary"><Facebook /></Link>
+                <Link href="https://instagram.com/neupgroup" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-primary"><Instagram /></Link>
+                <Link href="https://linkedin.com/company/neupgroup" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary"><Linkedin /></Link>
+                <Link href="https://twitter.com/neupgroup" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-muted-foreground hover:text-primary"><Twitter /></Link>
+                <Link href="https://youtube.com/@neupgroup" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-muted-foreground hover:text-primary"><Youtube /></Link>
               </div>
             </div>
           </div>
