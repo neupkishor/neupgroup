@@ -1,12 +1,32 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Mountain } from "lucide-react";
+import { Briefcase, Landmark, Mountain, Plane, Tag } from "lucide-react";
 
 const clients = [
   {
     name: "Happy Mountain Nepal",
     services: "Neup.Marketing, Neup.Site",
     icon: <Mountain className="h-10 w-10 text-primary" />,
+  },
+  {
+    name: "Lalpurja Nepal",
+    services: "Neup.Marketing",
+    icon: <Landmark className="h-10 w-10 text-primary" />,
+  },
+  {
+    name: "Yes Tourism Nepal",
+    services: "Neup.Site",
+    icon: <Plane className="h-10 w-10 text-primary" />,
+  },
+  {
+    name: "Bhattarai Deals",
+    services: "Neup.Marketing & Neup.Site",
+    icon: <Tag className="h-10 w-10 text-primary" />,
+  },
+  {
+    name: "A2 Consultancy, India",
+    services: "Neup.Marketing",
+    icon: <Briefcase className="h-10 w-10 text-primary" />,
   },
   // You can add more clients here
 ];
@@ -21,7 +41,7 @@ export function OurClients() {
             We are proud to partner with ambitious brands and help them grow.
           </p>
         </div>
-        <div className="max-w-2xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {clients.map((client) => (
             <Card key={client.name} className="hover:shadow-lg transition-shadow">
               <CardContent className="p-6 flex items-center gap-6">
