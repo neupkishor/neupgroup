@@ -36,11 +36,6 @@ export function ThemeSwitcher() {
     setMounted(true);
   }, []);
 
-  if (!mounted) {
-    // Return a placeholder or null to avoid hydration mismatch
-    return <div className="h-9 w-9" />;
-  }
-
   return (
     <Popover>
       <PopoverTrigger asChild>
@@ -49,20 +44,22 @@ export function ThemeSwitcher() {
           <span className="sr-only">Switch Theme</span>
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-auto p-4">
-        <div className="grid grid-cols-5 gap-2">
-          {colors.map((color) => (
-            <button
-              key={color}
-              className={`h-8 w-8 rounded-full border-2 ${
-                themeColor === color ? 'border-primary' : 'border-transparent'
-              }`}
-              style={{ backgroundColor: color }}
-              onClick={() => setThemeColor(color)}
-            />
-          ))}
-        </div>
-      </PopoverContent>
+      {mounted && (
+        <PopoverContent className="w-auto p-4">
+          <div className="grid grid-cols-5 gap-2">
+            {colors.map((color) => (
+              <button
+                key={color}
+                className={`h-8 w-8 rounded-full border-2 ${
+                  themeColor === color ? 'border-primary' : 'border-transparent'
+                }`}
+                style={{ backgroundColor: color }}
+                onClick={() => setThemeColor(color)}
+              />
+            ))}
+          </div>
+        </PopoverContent>
+      )}
     </Popover>
   );
 }
