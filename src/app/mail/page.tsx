@@ -1,8 +1,13 @@
+import type { Metadata } from 'next';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Check, Shield, Zap, Inbox, Lock, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: 'Neup Mail',
+};
 
 const features = [
   {

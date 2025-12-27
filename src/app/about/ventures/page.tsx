@@ -1,4 +1,4 @@
-
+import type { Metadata } from 'next';
 import {
   ventures,
 } from '@/components/sections/VenturePortfolio.config';
@@ -6,6 +6,10 @@ import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+
+export const metadata: Metadata = {
+  title: 'Our Ventures',
+};
 
 const statusStyles: { [key: string]: string } = {
   Live: 'bg-chart-2/10 text-chart-2 border-chart-2/20',

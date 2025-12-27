@@ -1,10 +1,14 @@
-
+import type { Metadata } from 'next';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, Briefcase, BookOpen, Sparkles, Code, Lightbulb, Users } from "lucide-react";
 import Link from "next/link";
 import { NeupLogo } from "@/components/NeupLogo";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: 'Neup.Jobs',
+};
 
 const opportunityPaths = [
   {

@@ -1,5 +1,4 @@
-
-
+import type { Metadata } from 'next';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, KeyRound, ShieldCheck, Link2, Settings, ArrowRight, UserCheck } from "lucide-react";
@@ -7,6 +6,10 @@ import Link from "next/link";
 import { NeupLogo } from "@/components/NeupLogo";
 import Image from "next/image";
 import { ventures } from "@/components/sections/VenturePortfolio.config";
+
+export const metadata: Metadata = {
+  title: 'NeupID',
+};
 
 const whatItEnables = [
   {
@@ -230,5 +233,4 @@ export default function NeupIdPage() {
     </div>
   );
 }
-
     

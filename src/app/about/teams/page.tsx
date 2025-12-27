@@ -1,33 +1,9 @@
 
+import type { Metadata } from 'next';
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-
-const teamMembers = [
-  {
-    name: "Kishor Neupane",
-    role: "Founder & CEO",
-    imageUrl: "https://neupgroup.com/assets/members/neupkishor.png",
-    initials: "KN",
-  },
-  {
-    name: "Bhawani Khanal",
-    role: "Marketing Head",
-    imageUrl: "https://neupgroup.com/assets/members/khanalcwani.png",
-    initials: "BK",
-  },
-  {
-    name: "Sandesh Shrestha",
-    role: "Development Head",
-    imageUrl: "https://neupgroup.com/assets/members/sandeshshrestha.png",
-    initials: "SS",
-  },
-  {
-    name: "Aakash Pun Magar",
-    role: "Cybersecurity Head",
-    imageUrl: "https://neupgroup.com/assets/members/aakashpun.png",
-    initials: "AP",
-  },
-];
+export const metadata: Metadata = {
+  title: 'Our Team',
+};
 
 export default function TeamsPage() {
   return (
@@ -49,19 +25,55 @@ export default function TeamsPage() {
         <section className="py-20 md:py-28">
             <div className="container">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                {teamMembers.map((member) => (
-                    <div key={member.name} className="flex flex-col items-start text-left">
+                
+                    <div className="flex flex-col items-start text-left">
                         <div className="w-full aspect-square rounded-lg bg-primary/10 flex items-center justify-center">
                             <img 
-                                src={member.imageUrl} 
-                                alt={member.name} 
+                                src="https://neupgroup.com/assets/members/neupkishor.png" 
+                                alt="Kishor Neupane" 
                                 className="w-full h-full object-contain"
                             />
                         </div>
-                        <h3 className="font-bold text-xl mt-4">{member.name}</h3>
-                        <p className="text-primary font-semibold">{member.role}</p>
+                        <h3 className="font-bold text-xl mt-4">Kishor Neupane</h3>
+                        <p className="text-primary font-semibold">Founder & CEO</p>
                     </div>
-                ))}
+                
+                    <div className="flex flex-col items-start text-left">
+                        <div className="w-full aspect-square rounded-lg bg-primary/10 flex items-center justify-center">
+                            <img 
+                                src="https://neupgroup.com/assets/members/khanalcwani.png" 
+                                alt="Bhawani Khanal" 
+                                className="w-full h-full object-contain"
+                            />
+                        </div>
+                        <h3 className="font-bold text-xl mt-4">Bhawani Khanal</h3>
+                        <p className="text-primary font-semibold">Marketing Head</p>
+                    </div>
+                
+                    <div className="flex flex-col items-start text-left">
+                        <div className="w-full aspect-square rounded-lg bg-primary/10 flex items-center justify-center">
+                            <img 
+                                src="https://neupgroup.com/assets/members/sandeshshrestha.png" 
+                                alt="Sandesh Shrestha" 
+                                className="w-full h-full object-contain"
+                            />
+                        </div>
+                        <h3 className="font-bold text-xl mt-4">Sandesh Shrestha</h3>
+                        <p className="text-primary font-semibold">Development Head</p>
+                    </div>
+                
+                    <div className="flex flex-col items-start text-left">
+                        <div className="w-full aspect-square rounded-lg bg-primary/10 flex items-center justify-center">
+                            <img 
+                                src="https://neupgroup.com/assets/members/aakashpun.png" 
+                                alt="Aakash Pun Magar" 
+                                className="w-full h-full object-contain"
+                            />
+                        </div>
+                        <h3 className="font-bold text-xl mt-4">Aakash Pun Magar</h3>
+                        <p className="text-primary font-semibold">Cybersecurity Head</p>
+                    </div>
+                
               </div>
             </div>
         </section>

@@ -9,7 +9,10 @@ import { Suspense } from 'react';
 import { ThemeProvider } from '@/components/ThemeProvider';
 
 export const metadata: Metadata = {
-  title: 'Neup Group',
+  title: {
+    default: 'Neup Group',
+    template: '%s | Neup Group',
+  },
   description: "A venture studio building the next generation of digital ventures from Nepal.",
 };
 
