@@ -2,7 +2,7 @@
 import type { Metadata } from 'next';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { CheckCircle, Zap, Palette, Smartphone, Search, Rocket, Shield, ArrowRight, Star, MousePointerSquare } from "lucide-react";
+import { CheckCircle, Zap, Palette, Smartphone, Rocket, Shield, ArrowRight, Star, MousePointerClick } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -40,7 +40,7 @@ const benefits = [
         description: "Host your website with confidence, backed by top-tier performance."
     },
      {
-        icon: <MousePointerSquare className="h-6 w-6 text-primary" />,
+        icon: <MousePointerClick className="h-6 w-6 text-primary" />,
         title: "Drag-and-Drop Editor",
         description: "No code needed. Visually build and edit your entire website."
     }
