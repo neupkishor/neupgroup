@@ -12,7 +12,7 @@ import { useEffect, useState } from 'react';
 
 export function Header() {
   const pathname = usePathname();
-  const [targetTitle, setTargetTitle] = useState('Neup Group');
+  const [targetTitle, setTargetTitle] = useState('Neup.Group');
 
   useEffect(() => {
     const getHeaderTitle = () => {
@@ -28,7 +28,7 @@ export function Header() {
         return currentVenture.name;
       }
 
-      return 'Neup Group';
+      return 'Neup.Group';
     };
     setTargetTitle(getHeaderTitle());
   }, [pathname]);

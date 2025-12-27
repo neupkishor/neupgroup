@@ -11,8 +11,8 @@ import { ThemeProvider } from '@/components/ThemeProvider';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Neup Group',
-    template: '%s, Neup Group',
+    default: 'Neup.Group',
+    template: '%s, Neup.Group',
   },
   description: "A venture studio building the next generation of digital ventures from Nepal.",
 };
