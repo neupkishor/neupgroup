@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/works',
     '/estate',
     '/site',
+    '/foundation',
   ];
 
   return routes.map((route) => ({
