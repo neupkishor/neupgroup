@@ -67,6 +67,13 @@ export const ventures: Venture[] = [
     status: "Building",
     link: "/estate",
   },
+   {
+    logo: Heart,
+    name: "Neup.Heritage",
+    description: "Preserve your family story, one generation at a time.",
+    status: "Building",
+    link: "/heritage",
+  },
   {
     logo: Share2,
     name: "Neup Socials",
@@ -110,5 +117,3 @@ export const ventures: Venture[] = [
     link: "#",
   },
 ];
-
-    

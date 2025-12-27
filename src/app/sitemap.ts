@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/estate',
     '/works',
     '/ledger',
+    '/heritage',
   ];
 
   return routes.map((route) => ({
@@ -29,5 +30,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
   }));
 }
-
-    
