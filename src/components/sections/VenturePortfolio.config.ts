@@ -158,11 +158,4 @@ export const ventures: Venture[] = [
     status: "Building",
     link: "#",
   },
-  {
-    logo: BrainCircuit,
-    name: "Project Synapse",
-    description: "Connecting disparate digital systems into a cohesive ecosystem.",
-    status: "Alpha",
-    link: "#",
-  },
 ];
