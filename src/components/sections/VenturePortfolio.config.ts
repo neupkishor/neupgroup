@@ -62,10 +62,10 @@ export const ventures: Venture[] = [
   },
   {
     logo: Briefcase,
-    name: "Neup.Jobs",
+    name: "Neup.Careers",
     description: "A talent gateway for builders to join the Neup ecosystem.",
     status: "Live",
-    link: "/jobs",
+    link: "/careers",
   },
     {
     logo: Newspaper,
