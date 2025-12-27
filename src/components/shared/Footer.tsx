@@ -26,10 +26,10 @@ export function Footer() {
       <div className="container max-w-screen-2xl">
         <div className="flex flex-col md:flex-row justify-between gap-8">
           <div className="max-w-sm">
-            <div className="flex items-center mb-4">
-              <NeupLogo className="h-8 w-8 mr-2 text-primary" />
-              <h3 className="text-xl font-headline font-bold">Neup Group</h3>
-            </div>
+            <Link href="/" className="inline-flex items-center mb-4 group">
+              <NeupLogo className="h-8 w-8 mr-2 text-primary group-hover:text-primary/80 transition-colors" />
+              <h3 className="text-xl font-headline font-bold group-hover:text-foreground/80 transition-colors">Neup.Group</h3>
+            </Link>
             <p className="text-muted-foreground">
               Building the next generation of digital ventures from Nepal, for the world.
             </p>
