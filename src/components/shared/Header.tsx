@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { NeupLogo } from '@/components/NeupLogo';
+import { ThemeSwitcher } from '@/components/ThemeSwitcher';
 
 export function Header() {
   return (
@@ -41,6 +42,7 @@ export function Header() {
           </nav>
         </div>
         <div className="flex flex-1 items-center justify-end space-x-2">
+           <ThemeSwitcher />
            <Button asChild>
               <Link href="#contact">Partner with us</Link>
             </Button>
