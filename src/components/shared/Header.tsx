@@ -16,13 +16,13 @@ export function Header() {
           </Link>
           <nav className="hidden items-center gap-6 text-sm md:flex">
             <Link
-              href="#ventures"
+              href="/#ventures"
               className="transition-colors hover:text-foreground/80 text-foreground/60"
             >
               Ventures
             </Link>
             <Link
-              href="#vision"
+              href="/#vision"
               className="transition-colors hover:text-foreground/80 text-foreground/60"
             >
               Vision
@@ -34,7 +34,7 @@ export function Header() {
               Team
             </Link>
             <Link
-              href="#contact"
+              href="/#contact"
               className="transition-colors hover:text-foreground/80 text-foreground/60"
             >
               Contact
@@ -44,7 +44,7 @@ export function Header() {
         <div className="flex flex-1 items-center justify-end space-x-2">
            <ThemeSwitcher />
            <Button asChild>
-              <Link href="#contact">Partner with us</Link>
+              <Link href="/neupid">Get Inside</Link>
             </Button>
         </div>
       </div>
