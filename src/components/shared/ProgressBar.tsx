@@ -36,23 +36,38 @@ export function ProgressBar() {
             const href = anchor.getAttribute('href');
             const targetAttr = anchor.getAttribute('target');
 
-            // Don't show for mailto, tel links or links opening in a new tab
-            if (href && (href.startsWith('mailto:') || href.startsWith('tel:') || targetAttr === '_blank')) {
+            // 1. Don't show for mailto, tel links.
+            if (href && (href.startsWith('mailto:') || href.startsWith('tel:'))) {
                 return;
             }
             
-            // Don't show for same-page hash links
+            // 2. Don't show for links opening in a new tab.
+            if (targetAttr === '_blank' || event.ctrlKey || event.metaKey || event.button === 1) {
+                return;
+            }
+            
+            // 3. Don't show for same-page hash links.
             if (href && href.startsWith('#')) {
                 return;
             }
-            
-            // Don't show for links to the same page (with or without hash)
-            const currentUrl = new URL(window.location.href);
-            const targetUrl = new URL(anchor.href, window.location.href);
 
-            if (currentUrl.origin === targetUrl.origin && currentUrl.pathname === targetUrl.pathname && currentUrl.search === targetUrl.search && href.includes('#')) {
+            // 4. Don't show for links to the same page (even if href is full URL).
+            try {
+                const currentUrl = new URL(window.location.href);
+                const targetUrl = new URL(anchor.href, window.location.href);
+
+                if (currentUrl.origin === targetUrl.origin && currentUrl.pathname === targetUrl.pathname && currentUrl.search === targetUrl.search) {
+                    // This handles same-page navigation, but allows hash links to scroll without progress bar
+                    if (currentUrl.hash !== targetUrl.hash) {
+                         return;
+                    }
+                }
+            } catch (e) {
+                // Invalid URL, let Next.js handle it, but don't start progress.
+                // This can happen with malformed hrefs.
                 return;
             }
+
 
             if (NProgress.isStarted() === false) {
                  NProgress.start();
