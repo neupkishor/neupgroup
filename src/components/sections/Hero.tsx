@@ -10,12 +10,12 @@ export function Hero() {
         <div className="absolute w-96 h-96 bg-secondary rounded-full right-0 bottom-0 translate-x-1/2 translate-y-1/2 blur-3xl animate-blob" style={{animationDelay: '2s'}}></div>
       </div>
       <div className="container px-4 md:px-6 relative">
-        <div className="flex flex-col items-center space-y-6 text-center">
-          <div className="space-y-4">
+        <div className="flex flex-col items-start space-y-6 text-left">
+          <div className="space-y-4 max-w-3xl">
             <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none">
               We build meaningful digital ventures.
             </h1>
-            <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+            <p className="text-muted-foreground md:text-xl">
               Neup Group is a venture studio from Nepal, focused on building the next generation of products and platforms for a global audience.
             </p>
           </div>
