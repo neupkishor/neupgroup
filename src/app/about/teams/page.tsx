@@ -50,11 +50,13 @@ export default function TeamsPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 {teamMembers.map((member) => (
                     <div key={member.name} className="flex flex-col items-start text-left">
-                        <img 
-                            src={member.imageUrl} 
-                            alt={member.name} 
-                            className="w-full aspect-square object-cover rounded-lg"
-                        />
+                        <div className="w-full aspect-square rounded-lg bg-primary/10 flex items-center justify-center">
+                            <img 
+                                src={member.imageUrl} 
+                                alt={member.name} 
+                                className="w-full h-full object-contain"
+                            />
+                        </div>
                         <h3 className="font-bold text-xl mt-4">{member.name}</h3>
                         <p className="text-primary font-semibold">{member.role}</p>
                     </div>
