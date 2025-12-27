@@ -7,27 +7,33 @@ import { Button } from '@/components/ui/button';
 import { NeupLogo } from '@/components/NeupLogo';
 import { ThemeSwitcher } from '@/components/ThemeSwitcher';
 import { ventures } from '@/components/sections/VenturePortfolio.config';
+import { useTypewriter } from '@/hooks/useTypewriter';
+import { useEffect, useState } from 'react';
 
 export function Header() {
   const pathname = usePathname();
+  const [targetTitle, setTargetTitle] = useState('Neup Group');
 
-  const getHeaderTitle = () => {
-    if (pathname === '/neupid') {
-      return 'NeupID';
-    }
-    if (pathname === '/foundation') {
-      return 'Neup.Foundation';
-    }
+  useEffect(() => {
+    const getHeaderTitle = () => {
+      if (pathname === '/neupid') {
+        return 'NeupID';
+      }
+      if (pathname === '/foundation') {
+        return 'Neup.Foundation';
+      }
 
-    const currentVenture = ventures.find(v => v.link === pathname);
-    if (currentVenture) {
-      return currentVenture.name;
-    }
+      const currentVenture = ventures.find(v => v.link === pathname);
+      if (currentVenture) {
+        return currentVenture.name;
+      }
 
-    return 'Neup Group';
-  };
-
-  const headerTitle = getHeaderTitle();
+      return 'Neup Group';
+    };
+    setTargetTitle(getHeaderTitle());
+  }, [pathname]);
+  
+  const animatedTitle = useTypewriter(targetTitle);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -36,8 +42,8 @@ export function Header() {
         <div className="flex items-center">
           <Link href="/" className="flex items-center space-x-2">
             <NeupLogo className="h-6 w-6 text-primary" />
-            <span className="hidden font-bold sm:inline-block font-headline">
-              {headerTitle}
+            <span className="font-bold sm:inline-block font-headline min-w-[150px]">
+              {animatedTitle}
             </span>
           </Link>
         </div>
