@@ -23,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/works',
     '/ledger',
     '/heritage',
+    '/hr',
   ];
 
   return routes.map((route) => ({

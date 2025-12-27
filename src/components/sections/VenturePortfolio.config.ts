@@ -103,6 +103,13 @@ export const ventures: Venture[] = [
     link: "/ledger",
   },
   {
+    logo: Briefcase,
+    name: "Neup.HR",
+    description: "Simplify HR, Empower Your Team.",
+    status: "Building",
+    link: "/hr",
+  },
+  {
     logo: Zap,
     name: "Katalyst",
     description: "AI-powered tools to accelerate digital content creation.",
