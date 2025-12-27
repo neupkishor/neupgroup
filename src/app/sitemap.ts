@@ -25,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/marketing',
     '/neupid',
     '/news',
+    '/referrals',
     '/search',
     '/site',
     '/socials',
