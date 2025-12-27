@@ -1,12 +1,15 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Briefcase, Landmark, Mountain, Plane, Tag, TrendingUp } from "lucide-react";
+import { Briefcase, Landmark, Mountain, Plane, Tag, TrendingUp, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const clients = [
   {
     name: "Happy Mountain Nepal",
     services: "Neup.Marketing, Neup.Site",
     icon: <Mountain className="h-10 w-10 text-primary" />,
+    slug: "happy-mountain-nepal-seo-migration",
   },
   {
     name: "Lalpurja Nepal",
@@ -17,11 +20,13 @@ const clients = [
     name: "Yes Tourism Nepal",
     services: "Neup.Site",
     icon: <Plane className="h-10 w-10 text-primary" />,
+    slug: "yes-tourism-nepal-dynamic-news-site",
   },
   {
     name: "Bhattarai Deals",
     services: "Neup.Marketing & Neup.Site",
     icon: <Tag className="h-10 w-10 text-primary" />,
+    slug: "bhattarai-deals-iphone-market-research",
   },
   {
     name: "A2 Consultancy, India",
@@ -33,7 +38,6 @@ const clients = [
     services: "Neup.Marketing",
     icon: <TrendingUp className="h-10 w-10 text-primary" />,
   },
-  // You can add more clients here
 ];
 
 export function OurClients() {
@@ -48,15 +52,27 @@ export function OurClients() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {clients.map((client) => (
-            <Card key={client.name} className="hover:shadow-lg transition-shadow">
-              <CardContent className="p-6 flex items-center gap-6">
-                <div className="p-3 bg-primary/10 rounded-lg">
-                  {client.icon}
+            <Card key={client.name} className="flex flex-col hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 flex flex-col flex-grow">
+                <div className="flex items-center gap-6 mb-4">
+                  <div className="p-3 bg-primary/10 rounded-lg">
+                    {client.icon}
+                  </div>
+                  <div>
+                    <p className="text-xl font-bold">{client.name}</p>
+                    <p className="text-muted-foreground">Services: {client.services}</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-xl font-bold">{client.name}</p>
-                  <p className="text-muted-foreground">Services: {client.services}</p>
-                </div>
+                {client.slug && (
+                  <div className="mt-auto pt-4 border-t border-border">
+                    <Button asChild variant="link" className="p-0 h-auto">
+                      <Link href={`/case/${client.slug}`}>
+                        Read Case
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </div>
+                )}
               </CardContent>
             </Card>
           ))}
