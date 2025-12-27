@@ -20,7 +20,7 @@ export const ventures: Venture[] = [
   },
   {
     logo: Plane,
-    name: "Tourio",
+    name: "Neup.Tourio",
     description: "The operating system for travel and tour operators in Nepal.",
     status: "Live",
     link: "/tourio",
@@ -159,3 +159,5 @@ export const ventures: Venture[] = [
     link: "#",
   },
 ];
+
+    

@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,7 +8,7 @@ import { NeupLogo } from "@/components/NeupLogo";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: 'Tourio',
+  title: 'Neup.Tourio',
 };
 
 const whatYouCanDo = [
@@ -74,7 +75,7 @@ export default function TourioPage() {
                         Discover Food, Experiences & Travel — All in One Place
                     </h1>
                     <p className="max-w-2xl mt-4 text-muted-foreground md:text-xl">
-                        Tourio helps you find the best food, local experiences, and travel packages with smart recommendations and easy booking.
+                        Neup.Tourio helps you find the best food, local experiences, and travel packages with smart recommendations and easy booking.
                     </p>
                     <div className="mt-8 flex flex-wrap gap-4">
                         <Button size="lg" asChild>
@@ -109,7 +110,7 @@ export default function TourioPage() {
         <section id="explore" className="py-20 md:py-28">
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="font-headline text-3xl md:text-4xl font-bold">What You Can Do With Tourio</h2>
+              <h2 className="font-headline text-3xl md:text-4xl font-bold">What You Can Do With Neup.Tourio</h2>
               <p className="max-w-2xl mx-auto mt-4 text-muted-foreground">
                 Your one-stop platform for discovering and booking the best local experiences.
               </p>
@@ -135,8 +136,8 @@ export default function TourioPage() {
             <div className="container">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div>
-                        <h2 className="font-headline text-3xl md:text-4xl font-bold">Why Tourio is Better</h2>
-                        <p className="mt-4 text-lg text-muted-foreground">We built Tourio to be a smarter, faster, and more integrated discovery engine.</p>
+                        <h2 className="font-headline text-3xl md:text-4xl font-bold">Why Neup.Tourio is Better</h2>
+                        <p className="mt-4 text-lg text-muted-foreground">We built Neup.Tourio to be a smarter, faster, and more integrated discovery engine.</p>
                     </div>
                     <div className="space-y-4">
                         {differentiators.map((text) => (
@@ -189,9 +190,9 @@ export default function TourioPage() {
                         />
                     </div>
                     <div className="space-y-6">
-                        <h2 className="font-headline text-3xl md:text-4xl font-bold">Grow Your Business with Tourio</h2>
+                        <h2 className="font-headline text-3xl md:text-4xl font-bold">Grow Your Business with Neup.Tourio</h2>
                         <p className="text-lg text-muted-foreground">
-                            Connect with a ready-to-buy audience of locals and travelers. Tourio is your new, most effective sales channel.
+                            Connect with a ready-to-buy audience of locals and travelers. Neup.Tourio is your new, most effective sales channel.
                         </p>
                         <div className="grid sm:grid-cols-2 gap-4">
                            {forBusinessFeatures.map(feature => (
@@ -204,7 +205,7 @@ export default function TourioPage() {
                         <div className="pt-4">
                             <Button size="lg" asChild>
                                 <Link href="mailto:partner@neup.group">
-                                    List Your Business on Tourio
+                                    List Your Business on Neup.Tourio
                                 </Link>
                             </Button>
                         </div>
@@ -218,7 +219,7 @@ export default function TourioPage() {
             <div className="container max-w-4xl text-center">
                  <h2 className="font-headline text-3xl md:text-4xl font-bold">The Future is Intelligent</h2>
                  <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-                    Tourio is more than a platform; it's a growing ecosystem. We're building the future of local discovery and travel planning.
+                    Neup.Tourio is more than a platform; it's a growing ecosystem. We're building the future of local discovery and travel planning.
                 </p>
                 <div className="mt-10 grid sm:grid-cols-2 gap-6">
                     {visionFeatures.map((item) => (
@@ -268,3 +269,5 @@ export default function TourioPage() {
     </div>
   );
 }
+
+    
