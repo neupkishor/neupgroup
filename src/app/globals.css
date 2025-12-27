@@ -108,12 +108,19 @@
     transition: background-color 700ms ease-in-out, color 700ms ease-in-out, border-color 700ms ease-in-out;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
   html {
     scroll-behavior: smooth;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+  }
+
+  .font-headline {
+      @apply font-bold;
   }
 }
 

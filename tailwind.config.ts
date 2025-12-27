@@ -17,6 +17,11 @@ export default {
       },
     },
     extend: {
+      fontWeight: {
+        normal: '400',
+        semibold: '600',
+        bold: '700',
+      },
       fontFamily: {
         body: ['Poppins', 'sans-serif'],
         headline: ['Poppins', 'sans-serif'],
