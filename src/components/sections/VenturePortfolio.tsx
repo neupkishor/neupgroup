@@ -1,7 +1,7 @@
 
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowUpRight, Plane, Megaphone, Zap, BrainCircuit, Mail, PenTool, Briefcase, Share2, KeyRound } from 'lucide-react';
+import { ArrowUpRight, Plane, Megaphone, Zap, BrainCircuit, Mail, PenTool, Briefcase, Share2, KeyRound, Gavel } from 'lucide-react';
 import Link from "next/link";
 import type { SVGProps } from "react";
 
@@ -54,6 +54,13 @@ export const ventures = [
     description: "Unified identity across the Neup ecosystem.",
     status: "Building",
     link: "/neupid",
+  },
+   {
+    logo: (props: SVGProps<SVGSVGElement>) => <Gavel {...props} />,
+    name: "Neup.Legis",
+    description: "Making laws & regulations clear, structured, and searchable.",
+    status: "Building",
+    link: "/legis",
   },
   {
     logo: (props: SVGProps<SVGSVGElement>) => <Zap {...props} />,

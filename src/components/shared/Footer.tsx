@@ -28,6 +28,7 @@ export function Footer() {
                 <li><Link href="/jobs" className="text-muted-foreground hover:text-primary">Neup Jobs</Link></li>
                 <li><Link href="/socials" className="text-muted-foreground hover:text-primary">Neup Socials</Link></li>
                 <li><Link href="/neupid" className="text-muted-foreground hover:text-primary">NeupID</Link></li>
+                <li><Link href="/legis" className="text-muted-foreground hover:text-primary">Neup.Legis</Link></li>
                 <li><Link href="#" className="text-muted-foreground hover:text-primary">Katalyst</Link></li>
               </ul>
             </div>
