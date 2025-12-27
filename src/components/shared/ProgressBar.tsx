@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useEffect } from 'react';
@@ -51,20 +52,32 @@ export function ProgressBar() {
                 return;
             }
 
-            // 4. Don't show for links to the same page (even if href is full URL).
+            // 4. Handle same-page navigations.
             try {
                 const currentUrl = new URL(window.location.href);
                 const targetUrl = new URL(anchor.href, window.location.href);
 
-                if (currentUrl.origin === targetUrl.origin && currentUrl.pathname === targetUrl.pathname && currentUrl.search === targetUrl.search) {
-                    // This handles same-page navigation, but allows hash links to scroll without progress bar
-                    if (currentUrl.hash !== targetUrl.hash) {
+                // Check if it's the same origin, pathname, and search params
+                const isSamePage = currentUrl.origin === targetUrl.origin && 
+                                   currentUrl.pathname === targetUrl.pathname && 
+                                   currentUrl.search === targetUrl.search;
+
+                if (isSamePage) {
+                    // If it's a link to a new hash on the same page, let browser handle it.
+                    if (currentUrl.hash !== targetUrl.hash && targetUrl.hash) {
                          return;
                     }
+                    // If it's a link to the same page (or same hash), scroll to top and prevent NProgress.
+                    event.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    // We need to push the state to update the URL in case the hash is different or removed
+                    if (currentUrl.href !== targetUrl.href) {
+                        window.history.pushState(null, '', targetUrl.href);
+                    }
+                    return;
                 }
             } catch (e) {
                 // Invalid URL, let Next.js handle it, but don't start progress.
-                // This can happen with malformed hrefs.
                 return;
             }
 
