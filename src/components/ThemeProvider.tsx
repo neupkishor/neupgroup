@@ -59,31 +59,31 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
         const [h, s, l] = hsl;
         const root = document.documentElement;
         
-        const isDarkBase = l < 30;
-
         root.style.setProperty('--theme-h', `${h}`);
         root.style.setProperty('--theme-s', `${s}%`);
         root.style.setProperty('--theme-l', `${l}%`);
         
         // Light theme
-        root.style.setProperty('--background-light', `0 0% 98%`);
         if (themeColor === '#000000') {
+             root.style.setProperty('--background-light', `0 0% 98%`);
              root.style.setProperty('--foreground-light', `0 0% 3.9%`);
              root.style.setProperty('--primary-light', `0 0% 9%`);
              root.style.setProperty('--primary-foreground-light', `0 0% 98%`);
         } else {
+             root.style.setProperty('--background-light', `${h} ${s}% 98%`);
              root.style.setProperty('--foreground-light', `${h} ${s}% ${Math.max(l - 40, 10)}%`);
              root.style.setProperty('--primary-light', `${h} ${s}% ${Math.max(l-10, 15)}%`);
              root.style.setProperty('--primary-foreground-light', `0 0% 100%`);
         }
 
         // Dark theme
-        root.style.setProperty('--background-dark', `0 0% 3.9%`);
         if (themeColor === '#000000') {
+             root.style.setProperty('--background-dark', `0 0% 3.9%`);
              root.style.setProperty('--foreground-dark', `0 0% 98%`);
              root.style.setProperty('--primary-dark', `0 0% 98%`);
              root.style.setProperty('--primary-foreground-dark', `0 0% 9%`);
         } else {
+            root.style.setProperty('--background-dark', `${h} ${s}% 3.9%`);
             root.style.setProperty('--foreground-dark', `${h} ${s}% ${Math.min(l + 60, 98)}%`);
             root.style.setProperty('--primary-dark', `${h} ${s}% ${Math.min(l + 10, 90)}%`);
             root.style.setProperty('--primary-foreground-dark', `${h} ${s}% 10%`);
