@@ -25,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/heritage',
     '/hr',
     '/suite',
+    '/search',
   ];
 
   return routes.map((route) => ({

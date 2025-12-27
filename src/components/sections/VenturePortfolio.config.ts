@@ -1,6 +1,6 @@
 
 import type { LucideIcon } from "lucide-react";
-import { Plane, Megaphone, Zap, BrainCircuit, Mail, PenTool, Briefcase, Share2, KeyRound, Gavel, Cog, Building, Globe, Heart, BookOpen, Layers } from 'lucide-react';
+import { Plane, Megaphone, Zap, BrainCircuit, Mail, PenTool, Briefcase, Share2, KeyRound, Gavel, Cog, Building, Globe, Heart, BookOpen, Layers, Search } from 'lucide-react';
 
 export interface Venture {
   logo: LucideIcon;
@@ -38,6 +38,13 @@ export const ventures: Venture[] = [
     description: "Build stunning websites in minutes—no coding needed.",
     status: "Building",
     link: "/site",
+  },
+  {
+    logo: Search,
+    name: "Neup.Search",
+    description: "Find what matters, instantly. Fast, private, and accurate search.",
+    status: "Building",
+    link: "/search",
   },
   {
     logo: Mail,
