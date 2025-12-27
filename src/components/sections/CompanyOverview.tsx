@@ -6,7 +6,7 @@ export function CompanyOverview() {
     {
       icon: <Building className="h-8 w-8 text-primary" />,
       title: "Legal Name",
-      value: "Neup Pvt. Ltd.",
+      value: "Neup Group Private Limited",
     },
     {
       icon: <Scale className="h-8 w-8 text-primary" />,
