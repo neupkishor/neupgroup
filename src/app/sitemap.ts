@@ -1,3 +1,4 @@
+
 import { MetadataRoute } from 'next';
 
 const URL = 'https://neupgroup.com';
@@ -20,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/foundation',
     '/estate',
     '/works',
+    '/ledger',
   ];
 
   return routes.map((route) => ({
@@ -27,3 +29,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
   }));
 }
+
+    

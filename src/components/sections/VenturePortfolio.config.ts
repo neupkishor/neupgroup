@@ -1,5 +1,6 @@
+
 import type { LucideIcon } from "lucide-react";
-import { Plane, Megaphone, Zap, BrainCircuit, Mail, PenTool, Briefcase, Share2, KeyRound, Gavel, Cog, Building, Globe, Heart } from 'lucide-react';
+import { Plane, Megaphone, Zap, BrainCircuit, Mail, PenTool, Briefcase, Share2, KeyRound, Gavel, Cog, Building, Globe, Heart, BookOpen } from 'lucide-react';
 
 export interface Venture {
   logo: LucideIcon;
@@ -88,6 +89,13 @@ export const ventures: Venture[] = [
     link: "/legis",
   },
   {
+    logo: BookOpen,
+    name: "Neup.Ledger",
+    description: "Smart, secure, and transparent accounting for your business.",
+    status: "Building",
+    link: "/ledger",
+  },
+  {
     logo: Zap,
     name: "Katalyst",
     description: "AI-powered tools to accelerate digital content creation.",
@@ -102,3 +110,5 @@ export const ventures: Venture[] = [
     link: "#",
   },
 ];
+
+    
