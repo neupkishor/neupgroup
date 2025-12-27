@@ -29,14 +29,6 @@ export function Header() {
         return { title: currentVenture.name, link: currentVenture.link };
       }
       
-      if (pathname.startsWith('/case/')) {
-        return { title: 'Our Clients', link: '/#clients' };
-      }
-
-      if (pathname === '/case') {
-        return { title: 'Neup.Group', link: '/' };
-      }
-      
       // Default for home and other pages
       return { title: 'Neup.Group', link: '/' };
     };
