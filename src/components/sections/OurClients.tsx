@@ -1,6 +1,6 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Briefcase, Landmark, Mountain, Plane, Tag } from "lucide-react";
+import { Briefcase, Landmark, Mountain, Plane, Tag, TrendingUp } from "lucide-react";
 
 const clients = [
   {
@@ -27,6 +27,11 @@ const clients = [
     name: "A2 Consultancy, India",
     services: "Neup.Marketing",
     icon: <Briefcase className="h-10 w-10 text-primary" />,
+  },
+  {
+    name: "Finance 360",
+    services: "Neup.Marketing",
+    icon: <TrendingUp className="h-10 w-10 text-primary" />,
   },
   // You can add more clients here
 ];
