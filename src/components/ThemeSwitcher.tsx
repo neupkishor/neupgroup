@@ -1,3 +1,4 @@
+
 'use client';
 import { useState, useEffect } from 'react';
 import { Paintbrush } from 'lucide-react';
@@ -36,7 +37,8 @@ export function ThemeSwitcher() {
   }, []);
 
   if (!mounted) {
-    return null;
+    // Return a placeholder or null to avoid hydration mismatch
+    return <div className="h-9 w-9" />;
   }
 
   return (

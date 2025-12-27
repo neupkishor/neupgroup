@@ -1,3 +1,4 @@
+
 'use client';
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
@@ -8,6 +9,12 @@ type ThemeContextType = {
 };
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+
+const colors = [
+  "#000000", "#6B7280", "#EF4444", "#F97316", "#F59E0B", "#EAB308", 
+  "#84CC16", "#22C55E", "#10B981", "#14B8A6", "#06B6D4", "#0EA5E9", 
+  "#3B82F6", "#6366F1", "#8B5CF6", "#A855F7", "#D946EF", "#EC4899", "#F43F5E",
+];
 
 // Function to convert hex to HSL
 function hexToHsl(hex: string): [number, number, number] | null {
@@ -43,6 +50,10 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     const savedColor = localStorage.getItem('theme-color');
     if (savedColor) {
       setThemeColorState(savedColor);
+    } else {
+      // If no color is saved, pick a random one
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      setThemeColorState(randomColor);
     }
     setMounted(true);
   }, []);
