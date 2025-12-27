@@ -3,12 +3,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Briefcase, Landmark, Mountain, Plane, Tag, TrendingUp, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from 'next/image';
 
 const clients = [
   {
     name: "Happy Mountain Nepal",
     services: "Neup.Marketing, Neup.Site",
-    icon: <Mountain className="h-10 w-10 text-primary" />,
+    icon: "https://neupgroup.com/content/p3happymountainnepal/logo.png",
     slug: "happy-mountain-nepal-seo-migration",
   },
   {
@@ -55,8 +56,12 @@ export function OurClients() {
             <Card key={client.name} className="flex flex-col hover:shadow-lg transition-shadow">
               <CardContent className="p-6 flex flex-col flex-grow">
                 <div className="flex items-center gap-6 mb-4">
-                  <div className="p-3 bg-primary/10 rounded-lg">
-                    {client.icon}
+                  <div className="p-3 bg-primary/10 rounded-lg h-[64px] w-[64px] flex items-center justify-center">
+                    {typeof client.icon === 'string' ? (
+                      <Image src={client.icon} alt={`${client.name} logo`} width={40} height={40} className="object-contain" />
+                    ) : (
+                      client.icon
+                    )}
                   </div>
                   <div>
                     <p className="text-xl font-bold">{client.name}</p>
