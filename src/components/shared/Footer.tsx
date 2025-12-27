@@ -23,6 +23,7 @@ export function Footer() {
                 <li><Link href="/tourio" className="text-muted-foreground hover:text-primary">Tourio</Link></li>
                 <li><Link href="/marketing" className="text-muted-foreground hover:text-primary">Neup Marketing</Link></li>
                 <li><Link href="/mail" className="text-muted-foreground hover:text-primary">Neup Mail</Link></li>
+                <li><Link href="/design" className="text-muted-foreground hover:text-primary">Neup Design</Link></li>
                 <li><Link href="#" className="text-muted-foreground hover:text-primary">Katalyst</Link></li>
               </ul>
             </div>
