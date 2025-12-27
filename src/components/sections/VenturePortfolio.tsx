@@ -1,82 +1,13 @@
 
+'use client';
+
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowUpRight, Plane, Megaphone, Zap, BrainCircuit, Mail, PenTool, Briefcase, Share2, KeyRound, Gavel } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import Link from "next/link";
-import type { SVGProps } from "react";
+import { ventures } from '@/components/sections/VenturePortfolio.config';
+import { useState, useEffect } from "react";
 
-export const ventures = [
-  {
-    logo: (props: SVGProps<SVGSVGElement>) => <Plane {...props} />,
-    name: "Tourio",
-    description: "The operating system for travel and tour operators in Nepal.",
-    status: "Live",
-    link: "/tourio",
-  },
-  {
-    logo: (props: SVGProps<SVGSVGElement>) => <Megaphone {...props} />,
-    name: "Neup Marketing",
-    description: "A modern marketing agency for the new generation of brands.",
-    status: "Live",
-    link: "/marketing",
-  },
-  {
-    logo: (props: SVGProps<SVGSVGElement>) => <Mail {...props} />,
-    name: "Neup Mail",
-    description: "A privacy-focused email service that respects its users.",
-    status: "Beta",
-    link: "/mail",
-  },
-  {
-    logo: (props: SVGProps<SVGSVGElement>) => <PenTool {...props} />,
-    name: "Neup Design",
-    description: "A product and brand design studio for ambitious companies.",
-    status: "Live",
-    link: "/design",
-  },
-  {
-    logo: (props: SVGProps<SVGSVGElement>) => <Briefcase {...props} />,
-    name: "Neup Jobs",
-    description: "A talent gateway for builders to join the Neup ecosystem.",
-    status: "Live",
-    link: "/jobs",
-  },
-  {
-    logo: (props: SVGProps<SVGSVGElement>) => <Share2 {...props} />,
-    name: "Neup Socials",
-    description: "The distribution engine for the Neup ecosystem.",
-    status: "Building",
-    link: "/socials",
-  },
-  {
-    logo: (props: SVGProps<SVGSVGElement>) => <KeyRound {...props} />,
-    name: "NeupID",
-    description: "Unified identity across the Neup ecosystem.",
-    status: "Building",
-    link: "/neupid",
-  },
-   {
-    logo: (props: SVGProps<SVGSVGElement>) => <Gavel {...props} />,
-    name: "Neup.Legis",
-    description: "Making laws & regulations clear, structured, and searchable.",
-    status: "Building",
-    link: "/legis",
-  },
-  {
-    logo: (props: SVGProps<SVGSVGElement>) => <Zap {...props} />,
-    name: "Katalyst",
-    description: "AI-powered tools to accelerate digital content creation.",
-    status: "Building",
-    link: "#",
-  },
-  {
-    logo: (props: SVGProps<SVGSVGElement>) => <BrainCircuit {...props} />,
-    name: "Project Synapse",
-    description: "Connecting disparate digital systems into a cohesive ecosystem.",
-    status: "Alpha",
-    link: "#",
-  },
-];
 
 const statusStyles: { [key: string]: string } = {
   Live: "bg-chart-2/10 text-chart-2 border-chart-2/20",
@@ -85,7 +16,20 @@ const statusStyles: { [key: string]: string } = {
   Alpha: "bg-yellow-400/20 text-yellow-500 border-yellow-400/30",
 };
 
+// Function to shuffle array and get first N items
+function getShuffledVentures(array: typeof ventures, count: number) {
+  const shuffled = [...array].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, count);
+}
+
+
 export function VenturePortfolio() {
+  const [randomVentures, setRandomVentures] = useState<typeof ventures>([]);
+
+  useEffect(() => {
+    setRandomVentures(getShuffledVentures(ventures, 6));
+  }, []);
+
   return (
     <section id="ventures" className="py-20 lg:py-32 bg-card">
       <div className="container">
@@ -96,7 +40,7 @@ export function VenturePortfolio() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {ventures.map((venture) => (
+          {randomVentures.map((venture) => (
             <Link href={venture.link} key={venture.name} className="group block">
               <Card className="h-full flex flex-col transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:-translate-y-1">
                 <CardHeader>

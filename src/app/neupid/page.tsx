@@ -1,11 +1,12 @@
 
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, KeyRound, ShieldCheck, Link2, Settings, ArrowRight, UserCheck } from "lucide-react";
 import Link from "next/link";
 import { NeupLogo } from "@/components/NeupLogo";
 import Image from "next/image";
-import { ventures } from "@/components/sections/VenturePortfolio";
+import { ventures } from "@/components/sections/VenturePortfolio.config";
 
 const whatItEnables = [
   {
@@ -209,7 +210,7 @@ export default function NeupIdPage() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-20 md:py-28">
+        <section className="py-20 md-py-28">
           <div className="container max-w-3xl text-center">
             <h2 className="font-headline text-3xl md:text-4xl font-bold">
               Your identity across Neup starts here.

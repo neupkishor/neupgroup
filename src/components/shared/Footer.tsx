@@ -3,7 +3,7 @@
 import { Facebook, Instagram, Linkedin, Twitter, Youtube } from 'lucide-react';
 import { NeupLogo } from '@/components/NeupLogo';
 import Link from 'next/link';
-import { ventures } from '@/components/sections/VenturePortfolio';
+import { ventures } from '@/components/sections/VenturePortfolio.config';
 import { useState, useEffect } from 'react';
 
 // Function to shuffle array and get first N items
@@ -17,7 +17,7 @@ export function Footer() {
   const [randomVentures, setRandomVentures] = useState<typeof ventures>([]);
 
   useEffect(() => {
-    setRandomVentures(getShuffledVentures(ventures, 8));
+    setRandomVentures(getShuffledVentures(ventures, 6));
   }, []);
 
 

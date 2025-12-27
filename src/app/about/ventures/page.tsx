@@ -1,6 +1,7 @@
+
 import {
   ventures,
-} from '@/components/sections/VenturePortfolio';
+} from '@/components/sections/VenturePortfolio.config';
 import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
