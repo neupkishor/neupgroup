@@ -10,6 +10,7 @@ import { ventures } from '@/components/sections/VenturePortfolio.config';
 import { useTypewriter } from '@/hooks/useTypewriter';
 import { useEffect, useState } from 'react';
 import { ArrowLeft } from 'lucide-react';
+import { caseStudies } from '@/app/case/case-studies';
 
 export function Header() {
   const pathname = usePathname();
@@ -19,20 +20,23 @@ export function Header() {
 
   useEffect(() => {
     const getHeaderInfo = () => {
-      if (pathname === '/neupid') {
-        return { title: 'NeupID', link: '/neupid' };
-      }
-      if (pathname === '/foundation') {
-        return { title: 'Neup.Foundation', link: '/foundation' };
-      }
+      // Find the venture whose link is the longest matching prefix of the current path
+      const currentVenture = ventures
+        .filter(v => pathname.startsWith(v.link) && v.link !== '/')
+        .sort((a, b) => b.link.length - a.link.length)[0];
 
-      const currentVenture = ventures.find(v => v.link === pathname);
       if (currentVenture) {
         return { title: currentVenture.name, link: currentVenture.link };
       }
 
+      if (pathname.startsWith('/case/')) {
+        return { title: 'Our Clients', link: '/#clients' };
+      }
+      
+      // Default for home and other pages
       return { title: 'Neup.Group', link: '/' };
     };
+
     const { title, link } = getHeaderInfo();
     setTargetTitle(title);
     setHeaderLink(link);
