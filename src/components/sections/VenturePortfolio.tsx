@@ -17,7 +17,7 @@ const ventures = [
     name: "Neup Marketing",
     description: "A modern marketing agency for the new generation of brands.",
     status: "Live",
-    link: "#",
+    link: "/marketing",
   },
   {
     logo: (props: SVGProps<SVGSVGElement>) => <Zap {...props} />,
