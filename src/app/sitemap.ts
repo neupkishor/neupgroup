@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/analytics',
     '/blog',
     '/careers',
+    '/case',
     '/design',
     '/estate',
     '/foundation',
