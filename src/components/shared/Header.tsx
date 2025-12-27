@@ -28,10 +28,10 @@ export function Header() {
               Vision
             </Link>
             <Link
-              href="/manage"
+              href="/about/teams"
               className="transition-colors hover:text-foreground/80 text-foreground/60"
             >
-              Manage
+              Team
             </Link>
             <Link
               href="#contact"

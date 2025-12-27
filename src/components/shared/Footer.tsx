@@ -35,7 +35,7 @@ export function Footer() {
             <div>
               <h4 className="font-semibold mb-3">Company</h4>
               <ul className="space-y-2">
-                <li><Link href="#vision" className="text-muted-foreground hover:text-primary">About</Link></li>
+                <li><Link href="/about/teams" className="text-muted-foreground hover:text-primary">Team</Link></li>
                 <li><Link href="/jobs" className="text-muted-foreground hover:text-primary">Careers</Link></li>
                 <li><Link href="/legal" className="text-muted-foreground hover:text-primary">Legal</Link></li>
                 <li><Link href="#contact" className="text-muted-foreground hover:text-primary">Partnerships</Link></li>
@@ -58,5 +58,3 @@ export function Footer() {
     </footer>
   );
 }
-
-    
