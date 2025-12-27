@@ -50,6 +50,7 @@ export function Footer() {
                 <li><Link href="/about/teams" className="text-muted-foreground hover:text-primary">Team</Link></li>
                  <li><Link href="/about/ventures" className="text-muted-foreground hover:text-primary">Ventures</Link></li>
                 <li><Link href="/jobs" className="text-muted-foreground hover:text-primary">Careers</Link></li>
+                <li><Link href="/foundation" className="text-muted-foreground hover:text-primary">Foundation</Link></li>
                 <li><Link href="/legal" className="text-muted-foreground hover:text-primary">Legal</Link></li>
                 <li><Link href="#contact" className="text-muted-foreground hover:text-primary">Partnerships</Link></li>
               </ul>

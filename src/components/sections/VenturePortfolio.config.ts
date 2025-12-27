@@ -88,13 +88,6 @@ export const ventures: Venture[] = [
     link: "/legis",
   },
   {
-    logo: Heart,
-    name: "Neup.Foundation",
-    description: "Giving back to the community, built into everything we do.",
-    status: "Live",
-    link: "/foundation",
-  },
-  {
     logo: Zap,
     name: "Katalyst",
     description: "AI-powered tools to accelerate digital content creation.",
