@@ -1,4 +1,3 @@
-
 import type { LucideIcon } from "lucide-react";
 import { Plane, Megaphone, Zap, BrainCircuit, Mail, PenTool, Briefcase, Share2, KeyRound, Gavel, Cog, Building, Globe, Heart, BookOpen, Layers, Search, Target, BarChart, Newspaper, Settings } from 'lucide-react';
 
@@ -16,14 +15,14 @@ export const ventures: Venture[] = [
     name: "Neup.Suite",
     description: "All your business tools, one powerful platform.",
     status: "Building",
-    link: "/suite",
+    link: "/suite/about",
   },
   {
     logo: Plane,
     name: "Neup.Tourio",
     description: "The operating system for travel and tour operators in Nepal.",
     status: "Live",
-    link: "/tourio",
+    link: "/tourio/about",
   },
   {
     logo: Megaphone,
@@ -37,7 +36,7 @@ export const ventures: Venture[] = [
     name: "Neup.Site",
     description: "Build stunning websites in minutes—no coding needed.",
     status: "Building",
-    link: "/site",
+    link: "/site/about",
   },
   {
     logo: Search,
@@ -51,14 +50,14 @@ export const ventures: Venture[] = [
     name: "Neup.Mail",
     description: "A privacy-focused email service that respects its users.",
     status: "Beta",
-    link: "/mail",
+    link: "/mail/about",
   },
   {
     logo: PenTool,
     name: "Neup.Design",
     description: "A product and brand design studio for ambitious companies.",
     status: "Live",
-    link: "/design",
+    link: "/design/about",
   },
   {
     logo: Briefcase,
@@ -79,21 +78,21 @@ export const ventures: Venture[] = [
     name: "Neup.Works",
     description: "Nepal’s marketplace for talent & projects.",
     status: "Building",
-    link: "/works",
+    link: "/works/about",
   },
   {
     logo: Building,
     name: "Neup.Estate",
     description: "Nepal’s most trusted real estate platform.",
     status: "Building",
-    link: "/estate",
+    link: "/estate/about",
   },
    {
     logo: Heart,
     name: "Neup.Heritage",
     description: "Preserve your family story, one generation at a time.",
     status: "Building",
-    link: "/heritage",
+    link: "/heritage/about",
   },
   {
     logo: Share2,
@@ -121,20 +120,20 @@ export const ventures: Venture[] = [
     name: "Neup.Ads",
     description: "Reach the right audience, every time.",
     status: "Building",
-    link: "/ads",
+    link: "/ads/about",
   },
   {
     logo: BarChart,
     name: "Neup.Analytics",
     description: "Turn data into smart decisions.",
     status: "Building",
-    link: "/analytics",
+    link: "/analytics/about",
   },
     {
     logo: Newspaper,
     name: "Neup.News",
     description: "Stay informed. Stay ahead. Fast, reliable news in one place.",
     status: "Building",
-    link: "/news",
+    link: "/news/about",
   },
 ];

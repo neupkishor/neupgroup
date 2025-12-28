@@ -1,4 +1,3 @@
-
 import { MetadataRoute } from 'next';
 import { caseStudies } from './case/case-studies';
 
@@ -10,15 +9,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/about/teams',
     '/about/ventures',
     '/about/life',
-    '/ads',
-    '/analytics',
+    '/ads/about',
+    '/analytics/about',
     '/blog',
     '/careers',
     '/case',
-    '/design',
-    '/estate',
+    '/design/about',
+    '/estate/about',
     '/foundation',
-    '/heritage',
+    '/heritage/about',
     '/hr',
     '/ledger',
     '/legal',
@@ -27,18 +26,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/legal/privacy',
     '/legal/terms',
     '/legis',
-    '/mail',
+    '/mail/about',
     '/manage',
     '/marketing',
-    '/neupid',
-    '/news',
+    '/neupid/about',
+    '/news/about',
     '/referrals',
     '/search',
-    '/site',
+    '/site/about',
     '/socials',
-    '/suite',
-    '/tourio',
-    '/works',
+    '/suite/about',
+    '/tourio/about',
+    '/works/about',
   ];
 
   const staticRoutes = routes.map((route) => ({

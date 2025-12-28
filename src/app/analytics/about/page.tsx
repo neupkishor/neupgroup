@@ -1,85 +1,84 @@
-
 import type { Metadata } from 'next';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { CheckCircle, Target, BarChart, Settings, ArrowRight, Rocket, UserCheck, Search } from "lucide-react";
+import { CheckCircle, ArrowRight, BarChart, LayoutDashboard, FileText, GitBranch, Cpu } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 export const metadata: Metadata = {
-  title: 'Neup.Ads | Reach the Right Audience, Every Time',
-  description: 'Neup.Ads helps you run high-performing ads across digital channels with precision targeting and measurable results.',
+  title: 'Neup.Analytics | Turn Data Into Smart Decisions',
+  description: 'Neup.Analytics provides real-time insights and actionable reports to grow your business efficiently.',
 };
 
 const features = [
     {
-        icon: <Target className="h-6 w-6 text-primary" />,
-        title: "Targeted Campaigns",
-        description: "Reach the right audience based on location, interests, and behavior."
-    },
-    {
         icon: <BarChart className="h-6 w-6 text-primary" />,
         title: "Real-Time Analytics",
-        description: "Track performance, clicks, and conversions instantly."
+        description: "Monitor performance instantly and make faster decisions."
     },
     {
-        icon: <Rocket className="h-6 w-6 text-primary" />,
-        title: "Budget Optimization",
-        description: "Get the best results while controlling your spend."
+        icon: <LayoutDashboard className="h-6 w-6 text-primary" />,
+        title: "Custom Dashboards",
+        description: "Visualize data the way your business needs it."
     },
     {
-        icon: <Settings className="h-6 w-6 text-primary" />,
-        title: "Multi-Channel Ads",
-        description: "Run campaigns on web, social media, and partner networks."
+        icon: <FileText className="h-6 w-6 text-primary" />,
+        title: "Reports & Forecasting",
+        description: "Generate actionable reports and predict future trends."
     },
     {
-        icon: <UserCheck className="h-6 w-6 text-primary" />,
-        title: "Creative Tools",
-        description: "Design impactful ads with ease using our templates and editor."
+        icon: <GitBranch className="h-6 w-6 text-primary" />,
+        title: "Integration-Ready",
+        description: "Connect seamlessly with Neup apps and other platforms."
+    },
+    {
+        icon: <Cpu className="h-6 w-6 text-primary" />,
+        title: "AI-Powered Insights",
+        description: "Leverage AI to identify patterns and opportunities."
     }
 ];
 
 const howItWorksSteps = [
     {
       number: 1,
-      title: "Set Your Goal",
-      description: "Choose what you want to achieve: leads, traffic, or sales."
+      title: "Connect Your Data",
+      description: "Integrate Neup apps or external sources."
     },
     {
       number: 2,
-      title: "Design & Target",
-      description: "Create your ad, select your audience, and set your budget."
+      title: "Analyze & Visualize",
+      description: "Use dashboards, charts, and AI insights to understand trends."
     },
     {
       number: 3,
-      title: "Launch & Analyze",
-      description: "Run your campaign and monitor performance in real-time."
+      title: "Act & Optimize",
+      description: "Make informed decisions and track results in real-time."
     }
 ];
 
 const benefits = [
-    "Maximize ROI with smart targeting",
-    "Simplify ad management across channels",
-    "Analytics-driven insights for continuous improvement",
-    "Optimized for small businesses, startups, and enterprises"
+    "Make data-driven decisions confidently",
+    "Save time with automated reporting",
+    "Identify growth opportunities quickly",
+    "Integrates seamlessly with Neup ecosystem for full visibility"
 ];
 
 const testimonials = [
   {
-    quote: "Our campaigns with Neup.Ads doubled our leads in just one month!",
-    author: "Anil, SME Owner",
-    image: "https://picsum.photos/seed/anil-ads/100/100"
+    quote: "Neup.Analytics transformed our decision-making—we see everything in real-time!",
+    author: "Raj, SME Owner",
+    image: "https://picsum.photos/seed/raj-analytics/100/100"
   },
   {
-    quote: "Easy to use and effective—we reach the right audience every time.",
+    quote: "The AI insights are a game-changer for spotting growth opportunities.",
     author: "Sita, Startup Founder",
-    image: "https://picsum.photos/seed/sita-ads/100/100"
+    image: "https://picsum.photos/seed/sita-analytics/100/100"
   }
 ];
 
-export default function AdsPage() {
+export default function AnalyticsPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <main className="flex-1">
@@ -89,25 +88,25 @@ export default function AdsPage() {
              <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                     <h1 className="font-headline text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter">
-                      Reach the Right Audience, Every Time.
+                      Turn Data Into Smart Decisions.
                     </h1>
                     <p className="max-w-xl mt-4 text-muted-foreground md:text-xl">
-                      Neup.Ads helps you run high-performing ads across digital channels with precision targeting and measurable results.
+                      Neup.Analytics provides real-time insights and actionable reports to grow your business efficiently.
                     </p>
                     <div className="mt-8 flex flex-wrap gap-4">
-                      <Button size="lg">Start Advertising Now</Button>
+                      <Button size="lg">Get Started Free</Button>
                       <Button size="lg" variant="outline">Request a Demo</Button>
                     </div>
-                     <p className="text-sm mt-6 text-muted-foreground">Maximize your reach, optimize your budget, and grow your business.</p>
+                     <p className="text-sm mt-6 text-muted-foreground">Accurate, real-time, and easy-to-understand analytics for every business.</p>
                 </div>
                 <div className="flex justify-center">
                     <Image 
-                        src="https://picsum.photos/seed/neup-ads-hero/600/500" 
-                        alt="Neup.Ads dashboard showing analytics"
+                        src="https://picsum.photos/seed/neup-analytics-hero/600/500" 
+                        alt="Analytics dashboard showing charts"
                         width={600}
                         height={500}
                         className="rounded-lg shadow-xl"
-                        data-ai-hint="advertising analytics dashboard"
+                        data-ai-hint="analytics dashboard chart"
                     />
                 </div>
             </div>
@@ -118,7 +117,7 @@ export default function AdsPage() {
         <section className="py-20 md:py-28">
             <div className="container">
                 <div className="text-center mb-12">
-                    <h2 className="font-headline text-3xl md:text-4xl font-bold">Powerful Tools to Grow Your Business</h2>
+                    <h2 className="font-headline text-3xl md:text-4xl font-bold">Insights That Drive Results</h2>
                 </div>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
                     {features.map((feature) => (
@@ -140,7 +139,7 @@ export default function AdsPage() {
         <section className="py-20 md:py-28 bg-card">
           <div className="container max-w-5xl">
             <div className="text-center mb-16">
-              <h2 className="font-headline text-3xl md:text-4xl font-bold">Launch Your First Campaign in 3 Easy Steps</h2>
+              <h2 className="font-headline text-3xl md:text-4xl font-bold">From Data to Decisions in 3 Steps</h2>
             </div>
             <div className="grid md:grid-cols-3 gap-x-8 gap-y-12">
               {howItWorksSteps.map((step, index) => (
@@ -162,8 +161,8 @@ export default function AdsPage() {
             <div className="container">
                  <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div>
-                         <h2 className="font-headline text-3xl md:text-4xl font-bold">Why Neup.Ads?</h2>
-                         <p className="mt-4 text-muted-foreground text-lg">We provide a simplified, powerful advertising platform designed for growth.</p>
+                         <h2 className="font-headline text-3xl md:text-4xl font-bold">Why Choose Neup.Analytics?</h2>
+                         <p className="mt-4 text-muted-foreground text-lg">We empower you with clear, automated, and integrated insights to drive confident decisions.</p>
                     </div>
                     <div className="space-y-4">
                       {benefits.map((benefit) => (
@@ -181,7 +180,7 @@ export default function AdsPage() {
         <section className="py-20 md:py-28 bg-card">
             <div className="container max-w-4xl">
                 <div className="text-center mb-12">
-                    <h2 className="font-headline text-3xl md:text-4xl font-bold">Businesses Grow with Neup.Ads</h2>
+                    <h2 className="font-headline text-3xl md:text-4xl font-bold">Businesses Trust Neup.Analytics</h2>
                 </div>
                  <Carousel opts={{ loop: true }} className="w-full">
                     <CarouselContent>
@@ -212,13 +211,13 @@ export default function AdsPage() {
         <section className="py-20 md:py-28">
           <div className="container max-w-3xl text-center">
             <h2 className="font-headline text-3xl md:text-4xl font-bold">
-              Start Reaching Your Audience Today
+              Make Smarter Decisions Today
             </h2>
             <p className="mt-4 text-muted-foreground md:text-lg">
-              Join businesses that trust Neup.Ads to maximize their advertising impact and ROI.
+              Join businesses that rely on Neup.Analytics to unlock insights and drive growth.
             </p>
             <div className="mt-8 flex flex-wrap gap-4 justify-center">
-              <Button size="lg">Start Advertising Now</Button>
+              <Button size="lg">Get Started Free</Button>
               <Button size="lg" variant="outline">Request a Demo</Button>
             </div>
           </div>
