@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { Plane, Megaphone, Zap, BrainCircuit, Mail, PenTool, Briefcase, Share2, KeyRound, Gavel, Cog, Building, Globe, Heart, BookOpen, Layers, Search, Target, BarChart, Newspaper, Settings } from 'lucide-react';
+import { Plane, Megaphone, Zap, BrainCircuit, Mail, PenTool, Briefcase, Share2, KeyRound, Gavel, Cog, Building, Globe, Heart, BookOpen, Layers, Search, Target, BarChart, Newspaper, Settings, Folder } from 'lucide-react';
 
 export interface Venture {
   logo: LucideIcon;
@@ -51,6 +51,13 @@ export const ventures: Venture[] = [
     description: "A privacy-focused email service that respects its users.",
     status: "Beta",
     link: "/mail/about",
+  },
+  {
+    logo: Folder,
+    name: "Neup.Drive",
+    description: "A structured workspace for storing, managing, and sharing files.",
+    status: "Building",
+    link: "/drive/about",
   },
   {
     logo: PenTool,

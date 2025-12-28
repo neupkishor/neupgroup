@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/careers',
     '/case',
     '/design/about',
+    '/drive/about',
     '/estate/about',
     '/foundation',
     '/heritage/about',
