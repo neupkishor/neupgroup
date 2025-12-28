@@ -7,6 +7,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { NeupLogo } from '@/components/NeupLogo';
+import { ThemeSwitcher } from '../ThemeSwitcher';
 
 const navLinks = [
   { href: '/#ventures', label: 'Ventures' },
@@ -26,17 +27,20 @@ export function MobileNav() {
           <span className="sr-only">Open navigation menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="top" className="p-0 h-full w-full bg-background/95 backdrop-blur-sm">
+      <SheetContent side="top" className="w-full bg-background/95 backdrop-blur-sm p-4">
         <div className="flex flex-col h-full">
-            <div className="flex items-center justify-between p-4 border-b">
+            <div className="flex items-center justify-between pb-4 border-b">
                  <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
                     <NeupLogo className="h-6 w-6 text-primary" />
                     <span className="font-bold font-headline">Neup.Group</span>
                 </Link>
-                <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
-                    <X className="h-6 w-6" />
-                    <span className="sr-only">Close navigation menu</span>
-                </Button>
+                <div className="flex items-center">
+                    <ThemeSwitcher />
+                    <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
+                        <X className="h-6 w-6" />
+                        <span className="sr-only">Close navigation menu</span>
+                    </Button>
+                </div>
             </div>
             <div className="flex-1 flex flex-col items-center justify-center p-8">
                  <nav className="flex flex-col items-center gap-8">
