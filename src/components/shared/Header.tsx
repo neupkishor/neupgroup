@@ -30,15 +30,11 @@ export function Header() {
         return { title: currentVenture.name, link: currentVenture.link };
       }
       
-      if (pathname.startsWith('/case')) {
-        return { title: 'Our Clients', link: '/case' };
-      }
-
       if (pathname.startsWith('/clients')) {
         return { title: 'Neup.Clients', link: '/clients' };
       }
       
-      // Default for home and other pages
+      // Default for home and other pages (including /case and /case/*)
       return { title: 'Neup.Group', link: '/' };
     };
 
