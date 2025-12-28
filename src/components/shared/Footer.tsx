@@ -68,7 +68,10 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Neup Group. All Rights Reserved.</p>
+          <p>
+            Developed with <Link href="/site" className="font-semibold text-foreground hover:underline">Neup.Site</Link> by <Link href="/marketing" className="font-semibold text-foreground hover:underline">Neup.Marketing</Link>
+          </p>
+          <p className="mt-2">&copy; {new Date().getFullYear()} Neup Group. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
