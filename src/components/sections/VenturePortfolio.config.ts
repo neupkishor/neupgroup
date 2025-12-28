@@ -103,27 +103,6 @@ export const ventures: Venture[] = [
     link: "/socials",
   },
   {
-    logo: KeyRound,
-    name: "NeupID",
-    description: "Unified identity across the Neup ecosystem.",
-    status: "Building",
-    link: "/neupid",
-  },
-   {
-    logo: Gavel,
-    name: "Neup.Legis",
-    description: "Making laws & regulations clear, structured, and searchable.",
-    status: "Building",
-    link: "/legis",
-  },
-  {
-    logo: Gavel,
-    name: "Neup.Legal",
-    description: "Terms of Service and Privacy Policy for Neup Group.",
-    status: "Live",
-    link: "/legal",
-  },
-  {
     logo: BookOpen,
     name: "Neup.Ledger",
     description: "Smart, secure, and transparent accounting for your business.",
@@ -157,12 +136,5 @@ export const ventures: Venture[] = [
     description: "Stay informed. Stay ahead. Fast, reliable news in one place.",
     status: "Building",
     link: "/news",
-  },
-   {
-    logo: Settings,
-    name: "Neup.Manage",
-    description: "Venture studio operations and management dashboard.",
-    status: "Live",
-    link: "/manage",
   },
 ];
