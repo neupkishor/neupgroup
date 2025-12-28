@@ -47,8 +47,8 @@ export function ProgressBar() {
                 return;
             }
             
-            // 3. Don't show for same-page hash links.
-            if (href && href.startsWith('#')) {
+            // 3. Don't show for same-page hash links that are not the top.
+            if (href && href.startsWith('#') && href.length > 1) {
                 return;
             }
 
@@ -57,22 +57,16 @@ export function ProgressBar() {
                 const currentUrl = new URL(window.location.href);
                 const targetUrl = new URL(anchor.href, window.location.href);
 
-                // Check if it's the same origin, pathname, and search params
                 const isSamePage = currentUrl.origin === targetUrl.origin && 
                                    currentUrl.pathname === targetUrl.pathname && 
                                    currentUrl.search === targetUrl.search;
 
-                if (isSamePage) {
-                    // If it's a link to a new hash on the same page, let browser handle it.
-                    if (currentUrl.hash !== targetUrl.hash && targetUrl.hash) {
-                         return;
-                    }
-                    // If it's a link to the same page (or same hash), scroll to top and prevent NProgress.
+                if (isSamePage && (!targetUrl.hash || targetUrl.hash === '#')) {
                     event.preventDefault();
                     window.scrollTo({ top: 0, behavior: 'smooth' });
-                    // We need to push the state to update the URL in case the hash is different or removed
+                    // If the URL is different (e.g. hash is being removed), update it.
                     if (currentUrl.href !== targetUrl.href) {
-                        window.history.pushState(null, '', targetUrl.href);
+                         window.history.pushState(null, '', targetUrl.href);
                     }
                     return;
                 }
