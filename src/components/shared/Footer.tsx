@@ -17,23 +17,23 @@ export function Footer() {
   const [randomVentures, setRandomVentures] = useState<Venture[]>([]);
 
   useEffect(() => {
-    setRandomVentures(getShuffledVentures(ventures, 5));
+    setRandomVentures(getShuffledVentures(ventures, 4));
   }, []);
 
 
   return (
-    <footer className="border-t py-12 bg-card">
+    <footer className="border-t py-16 bg-card">
       <div className="container max-w-screen-2xl">
-        <div className="flex flex-col md:flex-row justify-between gap-8">
-          <div className="max-w-sm">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div className="lg:col-span-4">
             <Link href="/" className="inline-flex items-center mb-4 group">
               <NeupLogo className="h-8 w-8 mr-2 text-primary group-hover:text-primary/80 transition-colors" />
               <h3 className="text-xl font-headline font-bold group-hover:text-foreground/80 transition-colors">Neup.Group</h3>
             </Link>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground pr-4">
               Building the next generation of digital ventures from Nepal, for the world.
             </p>
-            <div className="flex space-x-4 mt-4">
+            <div className="flex space-x-4 mt-6">
                 <Link href="https://facebook.com/neupgroup" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-muted-foreground hover:text-primary"><Facebook /></Link>
                 <Link href="https://instagram.com/neupgroup" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-primary"><Instagram /></Link>
                 <Link href="https://linkedin.com/company/neupgroup" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary"><Linkedin /></Link>
@@ -41,10 +41,10 @@ export function Footer() {
                 <Link href="https://youtube.com/@neupgroup" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-muted-foreground hover:text-primary"><Youtube /></Link>
             </div>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-2 gap-8">
+          <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-8">
             <div>
-              <h4 className="font-semibold mb-3">Ventures</h4>
-              <ul className="space-y-2">
+              <h4 className="font-semibold mb-4">Ventures</h4>
+              <ul className="space-y-3">
                 {randomVentures.map(venture => (
                    <li key={venture.name}><Link href={venture.link} className="text-muted-foreground hover:text-primary">{venture.name}</Link></li>
                 ))}
@@ -52,22 +52,26 @@ export function Footer() {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-3">Company</h4>
-              <ul className="space-y-2">
+              <h4 className="font-semibold mb-4">About</h4>
+              <ul className="space-y-3">
                 <li><Link href="/about/teams" className="text-muted-foreground hover:text-primary">Team</Link></li>
                 <li><Link href="/about/life" className="text-muted-foreground hover:text-primary">Life at Neup</Link></li>
-                <li><Link href="/about/ventures" className="text-muted-foreground hover:text-primary">Ventures</Link></li>
+                <li><Link href="/blog" className="text-muted-foreground hover:text-primary">Blog</Link></li>
+                <li><Link href="/case" className="text-muted-foreground hover:text-primary">Case Studies</Link></li>
+              </ul>
+            </div>
+             <div>
+              <h4 className="font-semibold mb-4">Company</h4>
+              <ul className="space-y-3">
                 <li><Link href="/careers" className="text-muted-foreground hover:text-primary">Careers</Link></li>
                 <li><Link href="/foundation" className="text-muted-foreground hover:text-primary">Foundation</Link></li>
-                <li><Link href="/referrals" className="text-muted-foreground hover:text-primary">Referrals</Link></li>
-                <li><Link href="/blog" className="text-muted-foreground hover:text-primary">Blog</Link></li>
+                 <li><Link href="#contact" className="text-muted-foreground hover:text-primary">Partnerships</Link></li>
                 <li><Link href="/legal" className="text-muted-foreground hover:text-primary">Legal</Link></li>
-                <li><Link href="#contact" className="text-muted-foreground hover:text-primary">Partnerships</Link></li>
               </ul>
             </div>
           </div>
         </div>
-        <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
+        <div className="mt-16 pt-8 border-t text-center text-sm text-muted-foreground">
           <p>
             Developed with <Link href="/site" className="font-semibold text-foreground hover:underline">Neup.Site</Link> by <Link href="/marketing" className="font-semibold text-foreground hover:underline">Neup.Marketing</Link>
           </p>
