@@ -9,8 +9,9 @@ import { ThemeSwitcher } from '@/components/ThemeSwitcher';
 import { ventures } from '@/components/sections/VenturePortfolio.config';
 import { useTypewriter } from '@/hooks/useTypewriter';
 import { useEffect, useState } from 'react';
-import { ArrowLeft } from 'lucide-react';
-import { caseStudies } from '@/app/case/case-studies';
+import { ArrowLeft, Menu } from 'lucide-react';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { MobileNav } from './MobileNav';
 
 export function Header() {
   const pathname = usePathname();
@@ -27,6 +28,14 @@ export function Header() {
 
       if (currentVenture) {
         return { title: currentVenture.name, link: currentVenture.link };
+      }
+      
+      if (pathname.startsWith('/case')) {
+        return { title: 'Our Clients', link: '/case' };
+      }
+
+      if (pathname.startsWith('/clients')) {
+        return { title: 'Neup.Clients', link: '/clients' };
       }
       
       // Default for home and other pages
@@ -101,10 +110,15 @@ export function Header() {
 
         {/* Right Section: Actions */}
         <div className="flex items-center justify-end space-x-2">
-           <ThemeSwitcher />
-           <Button asChild>
-              <Link href="/neupid">Get Inside</Link>
-            </Button>
+           <div className="hidden md:flex items-center space-x-2">
+             <ThemeSwitcher />
+             <Button asChild>
+                <Link href="/neupid">Get Inside</Link>
+              </Button>
+           </div>
+           <div className="md:hidden">
+              <MobileNav />
+           </div>
         </div>
       </div>
     </header>
