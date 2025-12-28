@@ -9,8 +9,7 @@ import { ThemeSwitcher } from '@/components/ThemeSwitcher';
 import { ventures } from '@/components/sections/VenturePortfolio.config';
 import { useTypewriter } from '@/hooks/useTypewriter';
 import { useEffect, useState } from 'react';
-import { ArrowLeft, Menu } from 'lucide-react';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { ArrowLeft } from 'lucide-react';
 import { MobileNav } from './MobileNav';
 
 export function Header() {
@@ -21,17 +20,17 @@ export function Header() {
 
   useEffect(() => {
     const getHeaderInfo = () => {
+      if (pathname.startsWith('/clients')) {
+        return { title: 'Neup.Clients', link: '/clients' };
+      }
+
       // Find the venture whose link is the longest matching prefix of the current path
       const currentVenture = ventures
-        .filter(v => pathname.startsWith(v.link) && v.link !== '/')
+        .filter(v => v.link !== '/' && pathname.startsWith(v.link))
         .sort((a, b) => b.link.length - a.link.length)[0];
 
       if (currentVenture) {
         return { title: currentVenture.name, link: currentVenture.link };
-      }
-      
-      if (pathname.startsWith('/clients')) {
-        return { title: 'Neup.Clients', link: '/clients' };
       }
       
       // Default for home and other pages (including /case and /case/*)
@@ -48,7 +47,7 @@ export function Header() {
   const isHomePage = pathname === '/';
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-md">
+    <header className="sticky top-0 z-40 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
       <div className="container flex h-14 max-w-screen-2xl items-center justify-between">
         {/* Left Section: Logo */}
         <div className="flex items-center">
