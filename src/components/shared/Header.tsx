@@ -11,9 +11,11 @@ import { useTypewriter } from '@/hooks/useTypewriter';
 import { useEffect, useState } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import { MobileNav } from './MobileNav';
+import { useAuthCheck } from '@/hooks/useAuthCheck';
 
 export function Header() {
   const pathname = usePathname();
+  const { isAuthenticated } = useAuthCheck();
   const [targetTitle, setTargetTitle] = useState('Neup.Group');
   const [headerLink, setHeaderLink] = useState('/');
   const [isLogoHovered, setIsLogoHovered] = useState(false);
@@ -32,7 +34,7 @@ export function Header() {
       if (currentVenture) {
         return { title: currentVenture.name, link: currentVenture.link };
       }
-      
+
       // Default for home and other pages (including /case and /case/*)
       return { title: 'Neup.Group', link: '/' };
     };
@@ -41,7 +43,7 @@ export function Header() {
     setTargetTitle(title);
     setHeaderLink(link);
   }, [pathname]);
-  
+
   const animatedTitle = useTypewriter(targetTitle);
 
   const isHomePage = pathname === '/';
@@ -51,7 +53,7 @@ export function Header() {
       <div className="container flex h-14 max-w-screen-2xl items-center justify-between">
         {/* Left Section: Logo */}
         <div className="flex items-center">
-          <div 
+          <div
             className="flex items-center space-x-2"
             onMouseEnter={() => !isHomePage && setIsLogoHovered(true)}
             onMouseLeave={() => setIsLogoHovered(false)}
@@ -66,7 +68,7 @@ export function Header() {
                 </div>
               )}
             </Link>
-            
+
             <Link href={headerLink}>
               <span className="font-bold sm:inline-block font-headline min-w-[150px]">
                 {animatedTitle}
@@ -105,15 +107,17 @@ export function Header() {
 
         {/* Right Section: Actions */}
         <div className="flex items-center justify-end space-x-2">
-           <div className="hidden md:flex items-center space-x-2">
-             <ThemeSwitcher />
-             <Button asChild>
-                <Link href="/neupid">Get Inside</Link>
-              </Button>
-           </div>
-           <div className="md:hidden">
-              <MobileNav />
-           </div>
+          <div className="hidden md:flex items-center space-x-2">
+            <ThemeSwitcher />
+            <Button asChild>
+              <Link href={isAuthenticated ? "/account" : "/account/about"}>
+                {isAuthenticated ? "Get Inside" : "Get Started"}
+              </Link>
+            </Button>
+          </div>
+          <div className="md:hidden">
+            <MobileNav />
+          </div>
         </div>
       </div>
     </header>
