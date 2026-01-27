@@ -8,6 +8,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { ProgressBar } from '@/components/shared/ProgressBar';
 import { Suspense } from 'react';
 import { ThemeProvider } from '@/components/ThemeProvider';
+import { SessionProvider } from '@/components/providers/SessionProvider';
 
 export const metadata: Metadata = {
   title: {
@@ -31,13 +32,15 @@ export default function RootLayout({
       </head>
       <body className={cn('font-body antialiased')}>
         <ThemeProvider>
-          <Suspense>
-            <ProgressBar />
-          </Suspense>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-          <Toaster />
+          <SessionProvider>
+            <Suspense>
+              <ProgressBar />
+            </Suspense>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+            <Toaster />
+          </SessionProvider>
         </ThemeProvider>
       </body>
     </html>
